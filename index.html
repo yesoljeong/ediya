@@ -8,7 +8,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>작업중 EDIYA COFFEE</title>
+    <title>작업중 EDIYA COFFEE 수정</title>
+    <!-- https://www.ediya.com -->
     <style>
         body {
             width: 100%;
@@ -329,6 +330,52 @@
             height: 300px;
             background: tomato;
         }
+
+        /* SNS BANNER */
+        #container .sns {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        #container .sns p:nth-child(1) {
+            margin: 50px 0 30px 0;
+            font-weight: 900;
+            color: #3C3C3C;
+        }
+
+        #container .sns p:nth-child(3) {
+            margin: 30px 0 40px 0;
+            color: #7B7B7B;
+        }
+
+        #container .sns .sns_img {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 1180px;
+            justify-content: center;
+        }
+
+        #container .sns .sns_img img {
+            width: 233px;
+            padding: 1px;
+        }
+
+        /* FOOTER */
+        #footer {
+            background-color: #262626;
+            width: 100%;
+            height: 250px;
+            margin-top:100px;
+            color:cornsilk;
+        }
+
+        #footer .sitemap {
+            display:flex;
+            justify-content: center;
+            margin-right:20px;
+        }
     </style>
     <script></script>
 </head>
@@ -354,7 +401,7 @@
                     <h2 class="screen_out">이디야 메인 메뉴</h2>
                     <li class="menu_title"><a href="#"><span>메뉴</span></a>
                         <ul>
-                            <li><a href="#">음료</a></li>
+                            <li><a href="">음료</a></li>
                             <li><a href="#">베이커리</a></li>
                             <li><a href="#">이디야 스낵</a></li>
                             <li><a href="#">MD</a></li>
@@ -457,11 +504,36 @@
                 </div>
             </div>
             <!-- SNS BANNER -->
-            <div class="sns"></div>
+            <div class="sns">
+                <p>EDIYA COFFEE SNS</p>
+                <div class="line"></div>
+                <p>Coffee moment with EDIYA</p>
+                <ul class="sns_img">
+                    <li><a href="#"><img src="img/sns_01.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_02.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_03.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_04.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_05.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_06.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_07.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_08.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_09.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_10.jpg" alt=""></a></li>
+                </ul>
+            </div>
         </container>
         <!-- FOOTER -->
         <footer id="footer">
-            <div class="sitemap"></div>
+            <ul class="sitemap">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">멤버스 이용약관</a></li>
+                <li><a href="#">가맹 안내</a></li>
+                <li><a href="#">대량쿠폰구매</a></li>
+                <li><a href="#">채용안내</a></li>
+                <li><a href="#">고객의 소리</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">점주의 방</a></li>
+            </ul>
             <div class="footer_logo"></div>
             <div class="ediya_info"></div>
         </footer>
