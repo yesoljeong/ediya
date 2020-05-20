@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>작업중 EDIYA COFFEE</title>
+    <style>
+        body {
+            width: 100%;
+        }
+
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .screen_out {
+            overflow: hidden;
+            text-indent: -9999px;
+        }
+
+        #wrap {}
+
+        /* HEADER */
+        #header {
+            margin: 0 auto;
+            width: 1180px;
+        }
+
+        #header .topmenu {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #header .topmenu li {
+            margin-right: 20px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        #header .nav {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        #header .nav .logo {
+            background-image: url('../img/top_logo.gif')
+        }
+
+        #header .nav .logo {
+            display: inline;
+        }
+
+        #header .nav .gnb {
+            display: flex;
+            justify-content: center;
+            width: 978px;
+        }
+
+        #header .nav .gnb .menu_title a {
+            display: block;
+            margin-right: 40px;
+            width: 120px;
+        }
+
+        #header .nav .gnb .menu_title a span {
+            margin-bottom: 20px;
+            display: block;
+            font-weight: 700;
+        }
+
+        #header .nav .gnb .menu_title li {
+            padding: 5px 0;
+            font-size: 12px;
+        }
+
+        /* container 공통 사항 */
+        #container .bold {
+            font-weight: 900;
+        }
+
+        #container .line {
+            width: 100px;
+            background: black;
+            height: 1px;
+            margin: 0 auto;
+        }
+
+        /* MAIN BANNER */
+        #container .banner {
+            margin-top: 30px;
+            background-image: url("img/main_banner_1.jpg");
+            height: 621px;
+        }
+
+        /* DREAM FACTORY BANNER */
+        #container .dream_factory {
+            background-image: url('img/dream_factory_bg.gif');
+            height: 450px;
+            display: flex;
+            padding-top: 40px;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        #container .dream_factory .dream_factory_text {
+            margin-top: 30px;
+        }
+
+        #container .dream_factory .dream_factory_text p:nth-child(2) {
+            font-size: 30px;
+        }
+
+        #container .dream_factory .dream_factory_text p:nth-child(3) {
+            margin-top: 30px;
+        }
+
+        #container .dream_factory img {
+            position: relative;
+            bottom: 0px;
+            position: absolute;
+            right: -170px;
+            bottom: 0px;
+        }
+
+        #container em {
+            font-size: 40px;
+        }
+
+        #container .dream_factory p,
+        em,
+        button {
+            color: white;
+        }
+
+        #container .dream_factory button {
+            width: 200px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            margin-top: 40px;
+            margin-right: 10px;
+            border: 1px solid #fff;
+        }
+
+        #container .dream_factory button a {
+            display: block;
+            width: 200px;
+            line-height: 50px;
+            color: white;
+        }
+
+        /* MENU BANNER */
+        #container .menu_banner {
+            height: 800px;
+            background: #bbe5fb;
+            background: url('img/block02_bg_ani.jpg');
+        }
+
+        #container .menu_banner P:nth-child(1) {
+            font-size: 40px;
+            text-align: center;
+            padding-top: 80px;
+            font-weight: 100;
+            font-family: 'Nunito Sans', sans-serif;
+            margin-bottom: 40px;
+        }
+
+        #container .menu_banner P:nth-child(3) {
+            font-size: 25px;
+            margin-top: 40px;
+            text-align: center;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        #container .menu_banner button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            margin: 40px auto;
+            border: 1px solid #243C86;
+        }
+
+        #container .menu_banner button a {
+            width: 200px;
+            line-height: 50px;
+            display: block;
+            color: #243C86;
+        }
+
+        /* FRANCHISE BANNER */
+        #container .franchise {
+            background: url('img/company_bg.jpg');
+            height: 460px;
+            position: relative;
+        }
+
+        #container .franchise .franchise_info {
+            color: white;
+            width: 500px;
+            text-align: center;
+            position: absolute;
+            right: 0;
+            top: 100px;
+        }
+
+        #container .franchise .franchise_info p:nth-child(1) {
+            font-size: 40px;
+        }
+
+        #container .franchise .franchise_info p:nth-child(2) {
+            margin-top: 40px;
+            /* width: 350px; */
+            line-height: 25px;
+        }
+
+        #container .franchise .franchise_info button {
+            width: 200px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            margin-top: 40px;
+            margin-right: 10px;
+            border: 1px solid #fff;
+        }
+
+        #container .franchise .franchise_info button a {
+            color: white;
+        }
+
+        /* CULTURE LAB BANNER */
+        #container .culture_lab {
+            background-image: url('img/block03_bg.jpg');
+            height: 800px;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #container .culture_lab p:nth-child(1) {
+            font-size: 40px;
+        }
+
+        #container .culture_lab p:nth-child(2) {
+            font-size: 25px;
+            margin-top: 30px;
+        }
+
+        /* COFFEE LAB BANNER */
+        #container .coffee_lab {
+            color: #3C3C3C;
+            text-align: center;
+        }
+
+        #container .coffee_lab p:nth-child(1) {
+            font-size: 40px;
+            margin-top: 100px;
+        }
+
+        #container .coffee_lab p:nth-child(2) {
+            font-size: 25px;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+
+        #container .coffee_lab .coffee_lab_img {
+            margin-top: 80px;
+            display: inline-block;
+        }
+
+        /* INFO BANNER */
+        #container .info {
+            margin: 0 auto;
+            width: 1190px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 100px;
+            color: #fff;
+        }
+
+        #container .info .title {
+            font-size: 25px;
+            margin-top: 30px;
+        }
+
+        #container .info .line {
+            background: #fff;
+            margin: 30px 0;
+            width: 70px;
+        }
+
+        #container .info .franchise_open {
+            background-image: url('img/main_banner_2.jpg');
+            width: 300px;
+            height: 300px;
+            background: tomato;
+            padding-left: 30px;
+            box-sizing: border-box;
+        }
+
+        #container .info .store_search {
+            background-image: url('img/main_store_bg.jpg');
+            background-position: center;
+            width: 300px;
+            height: 300px;
+            background: tomato;
+            padding-left: 30px;
+            box-sizing: border-box;
+        }
+
+        #container .info .store_search input {
+            margin-top: 30px;
+            width: 240px;
+            height: 40px;
+        }
+
+        #container .info .main_news {
+            width: 500px;
+            height: 300px;
+            background: tomato;
+        }
+    </style>
+    <script></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <!-- TOPMENU -->
+            <ul class="topmenu">
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
+                <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
+                <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
+                <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
+            </ul>
+            <div class="nav">
+                <h1 class="screen_out">메인 로고</h1>
+                <div class="logo"><img src="img/top_logo.gif" alt="logo"></div>
+                <!-- GNB MENU -->
+                <ul class="gnb">
+                    <h2 class="screen_out">이디야 메인 메뉴</h2>
+                    <li class="menu_title"><a href="#"><span>메뉴</span></a>
+                        <ul>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">베이커리</a></li>
+                            <li><a href="#">이디야 스낵</a></li>
+                            <li><a href="#">MD</a></li>
+                            <li><a href="#">비니스트</a></li>
+                            <li><a href="#">원두</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
+                        <ul>
+                            <li><a href="#">멤버스 소개</a></li>
+                            <li><a href="#">이디야카드</a></li>
+                            <li><a href="#">선물하기</a></li>
+                            <li><a href="#">이디야오더</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야커피랩</span></a>
+                        <ul>
+                            <li><a href="#">이디야커피랩</a></li>
+                            <li><a href="#">이디야커피랩 메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
+                        <ul>
+                            <li><a href="#">뮤직페스타</a></li>
+                            <li><a href="#">프로그램 및 시설 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야 소식</span></a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <container id="container">
+            <!-- MAIN BANNER -->
+            <div class="banner"></div>
+            <!-- DREAM FACTORY BANNER -->
+            <div class="dream_factory">
+                <div class="dream_factory_text">
+                    <em>DREAM FACTORY</em>
+                    <p>EDIYA COFFEE</p>
+                    <P>최첨단 시설에서 탄생하는 고품질의 원두를 철저한 물류관리시스템으로 안정적으로 제공합니다. </P>
+                    <button type="button"><a href="#">드림 팩토리</a></button>
+                    <button type="button"><a href="#">드림 물류센터</a></button>
+                </div>
+                <div><img src="img/dream_factory.png" alt="드림팩토리 건물 이미지"></div>
+            </div>
+            <!-- MENU BANNER -->
+            <div class="menu_banner">
+                <p>ALWAYS BESIDE YOU, <span class="bold">EDIYA COFFEE</span></p>
+                <div class="line"></div>
+                <p>늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.</p>
+                <button type="button"><a href="#">메뉴보기</a></button>
+            </div>
+            <!-- FRANCHISE BANNER -->
+            <div class="franchise">
+                <div class="franchise_info">
+                    <p>고객과 가맹점주, 협력사의 상생의 가치를 실천합니다.</p>
+                    <p>해외에 로열티를 내지 않는 순수한 국내브랜드로 품질좋고 맛있는 정직한 커피를 제공합니다.</p>
+                    <button><a href="#">가맹안내</a></button>
+                    <button><a href="#">브랜드소개</a></button>
+                </div>
+            </div>
+            <!-- CULTURE LAB BANNER -->
+            <div class="culture_lab">
+                <p>EDIYA <span class="bold">CULTURE LAB</span></p>
+                <P>커피를 더 특별하게 만드는 문화가 시작되는 공간</P>
+                <div></div>
+            </div>
+            <!-- COFFEE LAB BANNER -->
+            <div class="coffee_lab">
+                <p>EDIYA <span class="bold">COFFEE LAB</span></p>
+                <P>최고의 커피를 향한 끊임없는 노력, 이디야커피연구소</P>
+                <div class="line"></div>
+                <div class="coffee_lab_img">
+                    <img src="img/block05_img02.jpg" alt="커피머신">
+                    <img src="img/block05_img01.jpg" alt="베이커리">
+                </div>
+            </div>
+            <!-- INFO BANNER -->
+            <div class="info">
+                <div class="franchise_open">
+                    <p class="title">가맹점 개설 안내</p>
+                    <div class="line"></div>
+                    <p>성공 창업을 위한 선택</p>
+                </div>
+                <div class="store_search">
+                    <p class="title">매장찾기</p>
+                    <div class="line"></div>
+                    <p>가까운 이디야 매장을 확인해보세요.</p>
+                    <input type="search" placeholder="FIND A STORE">
+                </div>
+                <div class="main_news">
+                    <div></div>
+                </div>
+            </div>
+            <!-- SNS BANNER -->
+            <div class="sns"></div>
+        </container>
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="sitemap"></div>
+            <div class="footer_logo"></div>
+            <div class="ediya_info"></div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
