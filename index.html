@@ -142,6 +142,7 @@
             padding-top: 40px;
             justify-content: space-around;
             position: relative;
+            overflow: hidden;
         }
 
         #container .dream_factory .dream_factory_text {
@@ -241,6 +242,7 @@
         #container .menu_banner .menu_banner_ani {
             background: tomato;
             position: relative;
+            /* overflow: hidden; */
         }
 
         @keyframes ani1 {
@@ -467,7 +469,23 @@
 
         #container .coffee_lab .coffee_lab_img {
             margin-top: 80px;
-            display: inline-block;
+            /* display: inline-block; */
+            position: relative;
+            /* background:tomato; */
+            height: 750px;
+        }
+
+        #container .coffee_lab .coffee_lab_img div:nth-child(1) {
+            position: absolute;
+            top: 0px;
+            left: 20%;
+            z-index: 1;
+        }
+
+        #container .coffee_lab .coffee_lab_img div:nth-child(2) {
+            position: absolute;
+            top: 100px;
+            left: 45%;
         }
 
         /* INFO BANNER */
@@ -592,7 +610,7 @@
             align-items: center;
             /* background: tomato; */
             height: 60px;
-            border-bottom:1px solid #818181;
+            border-bottom: 1px solid #818181;
         }
 
         #footer .sitemap li {
@@ -763,8 +781,14 @@
                 <P>최고의 커피를 향한 끊임없는 노력, 이디야커피연구소</P>
                 <div class="line"></div>
                 <div class="coffee_lab_img">
-                    <img src="img/block05_img02.jpg" alt="커피머신">
-                    <img src="img/block05_img01.jpg" alt="베이커리">
+                    <div>
+                        <img src="img/block05_img02.jpg" alt="커피머신">
+                        <p>COFFEE LAB</p>
+                    </div>
+                    <div>
+                        <img src="img/block05_img01.jpg" alt="베이커리">
+                        <p>LAB MENU</p>
+                    </div>
                 </div>
             </div>
             <!-- INFO BANNER -->
