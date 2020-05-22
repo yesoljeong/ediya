@@ -39,13 +39,43 @@
 
         #header .topmenu {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
+            height: 43px;
         }
 
-        #header .topmenu li {
+        #header .topmenu .top_left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 180px;
+            font-size: 0.8em;
+        }
+
+        #header .topmenu .top_right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #header .topmenu .top_right li {
             margin-right: 20px;
-            margin-top: 20px;
             font-size: 13px;
+        }
+
+        #header .topmenu .top_right li a {
+            color: #848484;
+        }
+
+        #header .topmenu li img {
+            margin-right: -10px;
+        }
+
+        #header .topmenu li select {
+            width: 150px;
+            height: 25px;
+            padding: 0 10px;
+            color: #848484;
         }
 
         #header .nav {
@@ -54,7 +84,7 @@
         }
 
         #header .nav .logo {
-            background-image: url('../img/top_logo.gif')
+            background-image: url('../img/top_logo.gif');
         }
 
         #header .nav .logo {
@@ -71,6 +101,7 @@
             display: block;
             margin-right: 40px;
             width: 120px;
+            color: #848484;
         }
 
         #header .nav .gnb .menu_title a span {
@@ -144,12 +175,11 @@
         }
 
         #container .dream_factory button {
-            width: 200px;
-            height: 50px;
             background-color: rgba(0, 0, 0, 0);
             margin-top: 40px;
             margin-right: 10px;
             border: 1px solid #fff;
+            padding: 0;
         }
 
         #container .dream_factory button a {
@@ -157,6 +187,11 @@
             width: 200px;
             line-height: 50px;
             color: white;
+        }
+
+        #container .dream_factory button a:hover {
+            background-color: #fff;
+            color: rgb(5, 46, 107);
         }
 
         /* MENU BANNER */
@@ -184,11 +219,10 @@
 
         #container .menu_banner button {
             display: block;
-            width: 200px;
-            height: 50px;
             background-color: rgba(0, 0, 0, 0);
             margin: 40px auto;
             border: 1px solid #243C86;
+            padding: 0;
         }
 
         #container .menu_banner button a {
@@ -196,6 +230,157 @@
             line-height: 50px;
             display: block;
             color: #243C86;
+            font-size: 1.1em;
+        }
+
+        #container .menu_banner button a:hover {
+            color: #fff;
+            background-color: #243C86;
+        }
+
+        #container .menu_banner .menu_banner_ani {
+            background: tomato;
+            position: relative;
+        }
+
+        @keyframes ani1 {
+            from {}
+
+            to {
+                top: -310px;
+                left: 200px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(1) {
+            position: absolute;
+            top: -300px;
+            left: 200px;
+            animation-name: ani1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes ani2 {
+            from {}
+
+            to {
+                top: -210px;
+                left: 330px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(2) {
+            position: absolute;
+            top: -200px;
+            left: 330px;
+            animation-name: ani2;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes ani3 {
+            from {}
+
+            to {
+                top: -75px;
+                left: 370px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(3) {
+            position: absolute;
+            top: -65px;
+            left: 370px;
+            animation-name: ani3;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes ani4 {
+            from {}
+
+            to {
+                top: -190px;
+                left: 1250px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(4) {
+            position: absolute;
+            top: -180px;
+            left: 1250px;
+            animation-name: ani4;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes ani5 {
+            from {}
+
+            to {
+                top: -310px;
+                left: 1420px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(5) {
+            position: absolute;
+            top: -300px;
+            left: 1420px;
+            animation-name: ani5;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes ani6 {
+            from {}
+
+            to {
+                top: -140px;
+                right: 130px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(6) {
+            position: absolute;
+            top: -130px;
+            right: 130px;
+            animation-name: ani6;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes ani7 {
+            from {}
+
+            to {
+                top: -210px;
+                left: 1780px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(7) {
+            position: absolute;
+            top: -200px;
+            left: 1780px;
+            animation-name: ani7;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
         }
 
         /* FRANCHISE BANNER */
@@ -220,21 +405,28 @@
 
         #container .franchise .franchise_info p:nth-child(2) {
             margin-top: 40px;
-            /* width: 350px; */
             line-height: 25px;
         }
 
         #container .franchise .franchise_info button {
-            width: 200px;
-            height: 50px;
             background-color: rgba(0, 0, 0, 0);
             margin-top: 40px;
             margin-right: 10px;
             border: 1px solid #fff;
+            padding: 0;
         }
 
         #container .franchise .franchise_info button a {
-            color: white;
+            color: #fff;
+            width: 200px;
+            height: 50px;
+            display: block;
+            line-height: 50px;
+        }
+
+        #container .franchise .franchise_info button a:hover {
+            color: #3C3C3C;
+            background-color: #fff;
         }
 
         /* CULTURE LAB BANNER */
@@ -301,10 +493,9 @@
         }
 
         #container .info .franchise_open {
-            background-image: url('img/main_banner_2.jpg');
+            background-image: url('img/main_franchise_bg.jpg');
             width: 300px;
             height: 300px;
-            background: tomato;
             padding-left: 30px;
             box-sizing: border-box;
         }
@@ -314,7 +505,6 @@
             background-position: center;
             width: 300px;
             height: 300px;
-            background: tomato;
             padding-left: 30px;
             box-sizing: border-box;
         }
@@ -329,6 +519,32 @@
             width: 500px;
             height: 300px;
             background: tomato;
+        }
+
+        #container .info .main_news .notice {
+            height: 200px;
+            background: green;
+        }
+
+        #container .info .main_news .brochure {
+            background-color: #CBC3B2;
+            height: 100px;
+            position: relative;
+            display: block;
+            font-size: 1.5em;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #container .info .main_news .brochure a {
+            color: #fff;
+        }
+
+        #container .info .main_news .brochure img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
 
         /* SNS BANNER */
@@ -367,14 +583,56 @@
             background-color: #262626;
             width: 100%;
             height: 250px;
-            margin-top:100px;
-            color:cornsilk;
+            margin-top: 100px;
         }
 
         #footer .sitemap {
-            display:flex;
+            display: flex;
             justify-content: center;
-            margin-right:20px;
+            align-items: center;
+            /* background: tomato; */
+            height: 60px;
+            border-bottom:1px solid #818181;
+        }
+
+        #footer .sitemap li {
+            margin-right: 30px;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+        #footer .sitemap li a {
+            color: #818181;
+        }
+
+        #footer .footer_logo img {
+            margin: 30px auto;
+            /* background:tomato; */
+            display: block;
+        }
+
+        #footer .footer_info {
+            width: 790px;
+            margin: 0 auto;
+            color: #818181;
+            font-size: 0.7em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            flex-wrap: wrap;
+        }
+
+        #footer .footer_info li::after {
+            content: "|";
+            margin: 20px;
+        }
+
+        #footer p {
+            font-size: 0.7em;
+            margin-top: 20px;
+            color: #818181;
+            text-align: center;
         }
     </style>
     <script></script>
@@ -385,13 +643,26 @@
         <header id="header">
             <!-- TOPMENU -->
             <ul class="topmenu">
-                <li><a href="#">회원가입</a></li>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">매장찾기</a></li>
-                <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
-                <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
-                <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
-                <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
+                <div class="top_left">
+                    <li><a href="#">브랜드 사이트</a></li>
+                    <li><a href="#">기업 사이트</a></li>
+                </div>
+                <div class="top_right">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
+                    <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
+                    <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
+                    <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
+                    <li>
+                        <select name="language" id="">
+                            <option value="korean">Korean</option>
+                            <option value="korean">English</option>
+                            <option value="korean">Chinese</option>
+                        </select>
+                    </li>
+                </div>
             </ul>
             <div class="nav">
                 <h1 class="screen_out">메인 로고</h1>
@@ -460,6 +731,16 @@
                 <div class="line"></div>
                 <p>늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.</p>
                 <button type="button"><a href="#">메뉴보기</a></button>
+                <div class="menu_banner_ani">
+                    <img src="img/ani_object01_01.png" alt="">
+                    <img src="img/ani_object01_02.png" alt="">
+                    <img src="img/ani_object01.png" alt="">
+                    <img src="img/ani_object02.png" alt="">
+                    <img src="img/ani_object02_01.png" alt="">
+                    <img src="img/ani_object02_03.png" alt="">
+                    <img src="img/ani_object02_02.png" alt="">
+                </div>
+
             </div>
             <!-- FRANCHISE BANNER -->
             <div class="franchise">
@@ -500,7 +781,11 @@
                     <input type="search" placeholder="FIND A STORE">
                 </div>
                 <div class="main_news">
-                    <div></div>
+                    <div class="notice">게시판</div>
+                    <a class="brochure" href="#">
+                        <p>브로슈어 다운받기</p>
+                        <img src="img/main_brochure_img.png" alt="">
+                    </a>
                 </div>
             </div>
             <!-- SNS BANNER -->
@@ -534,8 +819,16 @@
                 <li><a href="#">Sitemap</a></li>
                 <li><a href="#">점주의 방</a></li>
             </ul>
-            <div class="footer_logo"></div>
-            <div class="ediya_info"></div>
+            <div class="footer_logo"><img src="img/bottom_logo.gif" alt="logo"></div>
+            <ul class="footer_info">
+                <li>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</li>
+                <li>TEL : 02-543-6467</li>
+                <li>FAX : 02-543-7191</li>
+                <li>사업자등록번호 : 107-86-16302</li>
+                <li>통신판매업 신고 : 강남 제 002519호</li>
+                <li>대표이사 : 문창기</li>
+            </ul>
+            <p>ⓒ 2017 EDIYA COFFEE CONPANY. ALL RIGTHS RECERVED</p>
         </footer>
     </div>
 
