@@ -469,23 +469,43 @@
 
         #container .coffee_lab .coffee_lab_img {
             margin-top: 80px;
-            /* display: inline-block; */
+            height: 720px;
             position: relative;
-            /* background:tomato; */
-            height: 750px;
         }
 
-        #container .coffee_lab .coffee_lab_img div:nth-child(1) {
+        #container .coffee_lab .coffee_lab_img>div:nth-child(1) {
+            background-image: url('img/block05_img02.jpg');
+            width: 630px;
+            height: 640px;
+            background-color: #fff;
             position: absolute;
-            top: 0px;
-            left: 20%;
+            left:19%;
             z-index: 1;
         }
 
-        #container .coffee_lab .coffee_lab_img div:nth-child(2) {
+        #container .coffee_lab .coffee_lab_img>div:nth-child(2) {
+            background-image: url('img/block05_img01.jpg');
+            width: 630px;
+            height: 640px;
             position: absolute;
-            top: 100px;
-            left: 45%;
+            left:49%;
+            bottom:0;
+        }
+
+        #container .coffee_lab .coffee_lab_img div p{
+            text-align: center;
+            font-size:1.3rem;
+            margin-top:500px;
+            margin-bottom:20px;
+            font-weight: 900;
+            color:#fff;
+        }
+
+        #container .coffee_lab .coffee_lab_line {
+            width: 130px;
+            height: 6px;
+            background-color: #fff;
+            margin: 0 auto;
         }
 
         /* INFO BANNER */
@@ -729,7 +749,7 @@
             </div>
         </header>
 
-        <container id="container">
+        <content id="container">
             <!-- MAIN BANNER -->
             <div class="banner"></div>
             <!-- DREAM FACTORY BANNER -->
@@ -781,13 +801,13 @@
                 <P>최고의 커피를 향한 끊임없는 노력, 이디야커피연구소</P>
                 <div class="line"></div>
                 <div class="coffee_lab_img">
-                    <div>
-                        <img src="img/block05_img02.jpg" alt="커피머신">
+                    <div class="back_img1">
                         <p>COFFEE LAB</p>
+                        <div class="coffee_lab_line"></div>
                     </div>
-                    <div>
-                        <img src="img/block05_img01.jpg" alt="베이커리">
+                    <div class="back_img2">
                         <p>LAB MENU</p>
+                        <div class="coffee_lab_line"></div>
                     </div>
                 </div>
             </div>
@@ -830,7 +850,7 @@
                     <li><a href="#"><img src="img/sns_10.jpg" alt=""></a></li>
                 </ul>
             </div>
-        </container>
+        </content>>
         <!-- FOOTER -->
         <footer id="footer">
             <ul class="sitemap">
