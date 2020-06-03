@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>작업중 EDIYA COFFEE</title>
+</head>
+<style>
+    #container{
+        width:70%;
+        background:tomato;
+        height:10000px;
+    }
+
+    #container .main_img {
+        background-image: url('img/bakery/bakery_visual.jpg');
+        width: 100%;
+        height: 460px;
+        margin-bottom: 100px;
+    }
+
+    #container .main_img h2 {
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 100px;
+    }
+
+    #container .main_img p {
+        text-align: center;
+        font-size: 1.7rem;
+        margin-top: 20px;
+    }
+
+    #container .main_img .main_btn {
+        margin: 100px auto;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid rgb(132, 132, 124);
+    }
+
+    #container .main_img .main_btn button {
+        width: 180px;
+        height: 40px;
+        background-color: rgb(132, 132, 124, 0);
+        border: 0px solid rgb(132, 132, 124);
+        border-right: 1px solid rgb(132, 132, 124);
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    #container .main_img .main_btn button:last-child {
+        border-right: 0px solid rgb(132, 132, 124);
+    }
+
+    #container .main_img .main_btn button a {
+        height: 100%;
+        line-height: 40px;
+        display: block;
+    }
+
+    #container .main_img .main_btn button a:hover {
+        background-color: rgb(132, 132, 124, 1);
+        color: #fff;
+        font-weight: 900;
+    }
+
+    #container h3{
+        text-align: right;
+    }
+
+    #container .top_line {
+        margin: 0 auto;
+        background-image: url('img/bakery/menu_line.gif');
+        height: 1px;
+        width: 1180px;
+        background-color:green;      
+    }
+
+    #container .top_line div p{
+        margin: 0 auto;
+        /* background:tomato; */
+        text-align: center;
+        font-size:1.5rem;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <!-- TOPMENU -->
+            <ul class="topmenu">
+                <div class="top_left">
+                    <li><a href="#">브랜드 사이트</a></li>
+                    <li><a href="#">기업 사이트</a></li>
+                </div>
+                <div class="top_right">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
+                    <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
+                    <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
+                    <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
+                    <li>
+                        <select name="language" id="">
+                            <option value="korean">Korean</option>
+                            <option value="korean">English</option>
+                            <option value="korean">Chinese</option>
+                        </select>
+                    </li>
+                </div>
+            </ul>
+            <div class="nav">
+                <h1 class="screen_out">메인 로고</h1>
+                <div class="logo"><a href="index.html"> <img src="img/top_logo.gif" alt="logo"></a></div>
+                <!-- GNB MENU -->
+                <ul class="gnb">
+                    <h2 class="screen_out">이디야 메인 메뉴</h2>
+                    <li class="menu_title"><a href="#"><span>메뉴</span></a>
+                        <ul>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="bakery.html">베이커리</a></li>
+                            <li><a href="#">이디야 스낵</a></li>
+                            <li><a href="#">MD</a></li>
+                            <li><a href="#">비니스트</a></li>
+                            <li><a href="#">원두</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
+                        <ul>
+                            <li><a href="#">멤버스 소개</a></li>
+                            <li><a href="#">이디야카드</a></li>
+                            <li><a href="#">선물하기</a></li>
+                            <li><a href="#">이디야오더</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야커피랩</span></a>
+                        <ul>
+                            <li><a href="#">이디야커피랩</a></li>
+                            <li><a href="#">이디야커피랩 메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
+                        <ul>
+                            <li><a href="#">뮤직페스타</a></li>
+                            <li><a href="#">프로그램 및 시설 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야 소식</span></a>
+                        <ul>
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!--  C O N T E N T  -->
+        <content id="container">
+            <div class="main_img">
+                <h2>베이커리</h2>
+                <p>ALWAYS BESIDE YOU, EDIYA BAKERY</p>
+                <div class="main_btn">
+                    <button><a href="#">음료</a></button>
+                    <button><a href="#">베이커리</a></button>
+                    <button><a href="#">이디야 스낵</a></button>
+                    <button><a href="#">MD</a></button>
+                    <button><a href="#">비니스트</a></button>
+                    <button><a href="#">원두</a></button>
+                </div>
+            </div>
+            <h3>HOME > 메뉴 > 베이커리</h3>
+            <div class="top_line">
+                <div>
+                    <p>추천 상품</p>
+                </div>
+                <div>
+                    <a href="#"><img src="img/bakery/IMG_1572224047505.png" alt=""></a>
+                    <a href="#"><img src="img/bakery/IMG_1564373464458.png" alt=""></a>
+                    <a href="#"><img src="img/bakery/IMG_1566779269364.png" alt=""></a>
+                </div>
+            </div>
+        </content>
+        <!-- FOOTER -->
+        <footer id="footer">
+            <ul class="sitemap">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">멤버스 이용약관</a></li>
+                <li><a href="#">가맹 안내</a></li>
+                <li><a href="#">대량쿠폰구매</a></li>
+                <li><a href="#">채용안내</a></li>
+                <li><a href="#">고객의 소리</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">점주의 방</a></li>
+            </ul>
+            <div class="footer_logo"><img src="img/bottom_logo.gif" alt="logo"></div>
+            <ul class="footer_info">
+                <li>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</li>
+                <li>TEL : 02-543-6467</li>
+                <li>FAX : 02-543-7191</li>
+                <li>사업자등록번호 : 107-86-16302</li>
+                <li>통신판매업 신고 : 강남 제 002519호</li>
+                <li>대표이사 : 문창기</li>
+            </ul>
+            <p>ⓒ 2017 EDIYA COFFEE CONPANY. ALL RIGTHS RECERVED</p>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
