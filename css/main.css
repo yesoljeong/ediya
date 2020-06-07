@@ -21,6 +21,7 @@ a {
 #header {
     margin: 0 auto;
     width: 1180px;
+    height: 130px;
 }
 
 #header .topmenu {
@@ -38,6 +39,12 @@ a {
     font-size: 0.8em;
 }
 
+#header .topmenu .top_left li:nth-child(1) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding-right: 16px;
+    vertical-align: middle;
+}
+
 #header .topmenu .top_right {
     display: flex;
     justify-content: flex-end;
@@ -45,8 +52,15 @@ a {
 }
 
 #header .topmenu .top_right li {
-    margin-right: 20px;
+    margin-right: 15px;
     font-size: 13px;
+}
+
+#header .topmenu .top_right li:nth-child(1),
+#header .topmenu .top_right li:nth-child(2) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding-right: 16px;
+    vertical-align: middle;
 }
 
 #header .topmenu .top_right li a {
@@ -73,45 +87,38 @@ a {
     background-image: url('../img/top_logo.gif');
     background-repeat: no-repeat;
     display: inline;
+    z-index: 1000;
 }
 
 #header .nav .gnb {
     display: flex;
     justify-content: center;
-    width: 978px;
-    margin-bottom: 30px;
-    background:green;
-    height:30px;
-    /* overflow: hidden; */
-
-    /display: none;
-    min-width: 1100px;
-    height: 500px;
-    z-index: 999;
+    background: #fff;
+    height: 30px;
     position: absolute;
     left: 0;
     right: 0;
-    top: 80px;
-    text-align: center;
-    font-size: 0;
-    /* 드랍다운 박스 쉐도우 */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);  
+    top: 75px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-left: 200px;
 }
 
 #header .nav .gnb:hover {
-    height:200px;
+    height: 300px;
     z-index: 999;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-#header .nav .gnb .menu_title ul{
+#header .nav .gnb .menu_title ul {
+    /* background:tomato; */
 }
 
 #header .nav .gnb .menu_title a {
     display: block;
-    margin-right: 40px;
-    width: 120px;
+    margin-right: 60px;
     color: #848484;
+    font-weight: 500;
 }
 
 #header .nav .gnb .menu_title a span {
@@ -120,9 +127,9 @@ a {
     font-weight: 700;
 }
 
-#header .nav .gnb .menu_title li {
-    padding: 5px 0;
-    font-size: 12px;
+#header .nav .gnb .menu_title li a {
+    padding: 10px 0;
+    font-size: 13px;
 }
 
 /* FOOTER */
