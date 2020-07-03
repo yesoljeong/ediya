@@ -55,6 +55,12 @@
         display: block;
     }
 
+    #container .main_img .main_btn button:nth-child(2) a {
+        background-color: rgb(132, 132, 124, 1);
+        color:#fff;
+        font-weight: 600;
+    }
+
     #container .main_img .main_btn button:last-child {
         border-right: 0px solid rgb(132, 132, 124);
     }
@@ -71,8 +77,13 @@
         font-weight: 900;
     }
 
-    #container h3 {
+    #container>h3 {
+        width: 60%;
         text-align: right;
+        font-size: 0.8rem;
+        color: #A7A7A7;
+        margin: 50px auto;
+        word-spacing: 8px;
     }
 
     #container h2 {
@@ -114,7 +125,6 @@
         padding-left: 30px;
         width: 60%;
         margin: 100px auto;
-        /* background-color:tomato; */
     }
 
     #container .check_box_item input {
@@ -127,7 +137,45 @@
         align-content: space-around;
         flex-wrap: wrap;
         width: 60%;
-        /* background:tomato; */
+        margin: 0 auto;
+    }
+
+    #container .bakery_img {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 150px;
+    }
+
+    #container .bakery_img a {
+        display: block;
+    }
+
+    #container .bakery_img a h6 {
+        text-align: center;
+    }
+
+    #container .check_box_item {
+        border: 1px solid rgb(132, 132, 124);
+        border-radius: 8px;
+        height: 80px;
+        line-height: 80px;
+        padding-left: 30px;
+        width: 60%;
+        margin: 100px auto;
+    }
+
+    #container .check_box_item input {
+        margin-left: 30px;
+    }
+
+    #container .bakery_items_img {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-around;
+        flex-wrap: wrap;
+        width: 60%;
         margin: 0 auto;
     }
 
@@ -147,24 +195,25 @@
         padding-bottom: 30px;
     }
 
-    #container .bottom_button{
+    #container .bottom_button {
         margin: 0 auto;
-        padding-top:100px;
-        width:200px;
+        padding: 100px 0;
+        padding-top: 100px;
+        width: 200px;
     }
 
-    #container .bottom_button button{
+    #container .bottom_button button {
         border: 1px solid #000;
         border-radius: 20px;
-        width:200px;
-        height:50px;
-        background-color:#fff;
+        width: 200px;
+        height: 50px;
+        background-color: #fff;
     }
 
-    #container .bottom_button button a{
-        width:100%;
-        height:100%;
-        display:block;
+    #container .bottom_button button a {
+        width: 100%;
+        height: 100%;
+        display: block;
         line-height: 50px;
     }
 </style>
@@ -181,7 +230,7 @@
                 <div class="top_right">
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">회원가입</a></li>
-                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="map.html">매장찾기</a></li>
                     <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
                     <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
                     <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
@@ -208,7 +257,7 @@
                             <li><a href="#">이디야 스낵</a></li>
                             <li><a href="#">MD</a></li>
                             <li><a href="#">비니스트</a></li>
-                            <li><a href="#">원두</a></li>
+                            <li><a href="bean.html">원두</a></li>
                         </ul>
                     </li>
                     <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
@@ -228,13 +277,13 @@
                     </li>
                     <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
                         <ul>
-                            <li><a href="#">뮤직페스타</a></li>
+                            <li><a href="musicfesta.html">뮤직페스타</a></li>
                             <li><a href="#">프로그램 및 시설 안내</a></li>
                         </ul>
                     </li>
                     <li class="menu_title"><a href="#"><span>이디야 소식</span></a>
                         <ul>
-                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="#">공지사항</a></li>
                             <li><a href="#">이벤트</a></li>
                         </ul>
                     </li>
@@ -251,11 +300,11 @@
                 <!--  MAIN VISUAL in BUTTON -->
                 <div class="main_btn">
                     <button><a href="#">음료</a></button>
-                    <button><a href="#">베이커리</a></button>
+                    <button><a href="bakery.html">베이커리</a></button>
                     <button><a href="#">이디야 스낵</a></button>
                     <button><a href="#">MD</a></button>
                     <button><a href="#">비니스트</a></button>
-                    <button><a href="#">원두</a></button>
+                    <button><a href="bean.html">원두</a></button>
                 </div>
             </div>
             <h3>HOME > 메뉴 > 베이커리</h3>
@@ -282,17 +331,17 @@
             <!-- BAKERY ITEM IMG -->
             <div class="bakery_items_img">
                 <script>
-                    bakeryName=['브리또', '브리또', '치즈케이크', '티라미수', '크림롤', '초코롤', '크루아상', '허니식빵' ]
+                    bakeryName = ['브리또', '브리또', '치즈케이크', '티라미수', '크림롤', '초코롤', '크루아상', '허니식빵']
 
-                    for (i = 1; i <= 8; i++) {
+                    for (let i = 1; i <= bakeryName.length; i++) {
                         document.write(
-                            divTag = `<div>
-                                        <a href="#"><img src="img/bakery/img_items_${i}.png" alt="bakery_img">
-                                        <h6>${bakeryName[0+i-1]}</h6>
-                                        </a>
-                                    </div>`
+                            `<div>
+                                <a href="#"><img src="img/bakery/img_items_${i}.png" alt="bakery_img">
+                                <h6>${bakeryName[i-1]}</h6>
+                                </a>
+                            </div>`
                         )
-                    };
+                    }
                 </script>
             </div>
             <div class="bottom_button">
@@ -323,9 +372,6 @@
             <p>ⓒ 2017 EDIYA COFFEE CONPANY. ALL RIGTHS RECERVED</p>
         </footer>
     </div>
-
-
-
 </body>
 
 </html>

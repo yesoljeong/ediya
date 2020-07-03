@@ -12,26 +12,6 @@
     <title>작업중 EDIYA COFFEE 수정</title>
     <!-- https://www.ediya.com -->
     <style>
-        body {
-            width: 100%;
-        }
-
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .screen_out {
-            overflow: hidden;
-            text-indent: -9999px;
-        }
-
-        #wrap {}
-
         /* container 공통 사항 */
         #container .bold {
             font-weight: 900;
@@ -46,8 +26,99 @@
 
         /* MAIN BANNER */
         #container .banner {
-            background-image: url("img/main_banner_1.jpg");
+            position: relative;
             height: 621px;
+            overflow: hidden;
+        }
+
+        #container .banner .slide_banner {
+            width: 300%;
+            display: flex;
+        }
+
+        #container .banner button {
+            border: 0px;
+        }
+
+        #container .banner .btn_prev {
+            position: absolute;
+            top: 250px;
+            left: 50px;
+            height: 100px;
+            background: url('img/main_visual_prev.png');
+            width: 24px;
+            height: 45px;
+        }
+
+        #container .banner .btn_next {
+            position: absolute;
+            top: 250px;
+            right: 50px;
+            height: 100px;
+            background: url('img/main_visual_next.png');
+            width: 24px;
+            height: 45px;
+        }
+
+        /* DREAM FACTORY BANNER */
+        #container .dream_factory {
+            background-image: url('img/dream_factory_bg.gif');
+            height: 450px;
+            display: flex;
+            padding-top: 40px;
+            justify-content: space-around;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #container .dream_factory .dream_factory_text {
+            margin-top: 30px;
+        }
+
+        #container .dream_factory .dream_factory_text p:nth-child(2) {
+            font-size: 30px;
+        }
+
+        #container .dream_factory .dream_factory_text p:nth-child(3) {
+            margin-top: 30px;
+        }
+
+        #container .dream_factory img {
+            position: relative;
+            bottom: 0px;
+            position: absolute;
+            right: -170px;
+            bottom: 0px;
+        }
+
+        #container em {
+            font-size: 40px;
+        }
+
+        #container .dream_factory p,
+        em,
+        button {
+            color: white;
+        }
+
+        #container .dream_factory button {
+            background-color: rgba(0, 0, 0, 0);
+            margin-top: 40px;
+            margin-right: 10px;
+            border: 1px solid #fff;
+            padding: 0;
+        }
+
+        #container .dream_factory button a {
+            display: block;
+            width: 200px;
+            line-height: 50px;
+            color: white;
+        }
+
+        #container .dream_factory button a:hover {
+            background-color: #fff;
+            color: rgb(5, 46, 107);
         }
 
         /* DREAM FACTORY BANNER */
@@ -116,6 +187,7 @@
             height: 800px;
             background: #bbe5fb;
             background: url('img/block02_bg_ani.jpg');
+            overflow: hidden;
         }
 
         #container .menu_banner P:nth-child(1) {
@@ -208,6 +280,37 @@
                 top: -75px;
                 left: 370px;
             }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(3) {
+            position: absolute;
+            top: -65px;
+            left: 370px;
+            animation-name: ani3;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes ani4 {
+            from {}
+
+            to {
+                top: -190px;
+                left: 1250px;
+            }
+        }
+
+        #container .menu_banner .menu_banner_ani img:nth-child(4) {
+            position: absolute;
+            top: -180px;
+            left: 1250px;
+            animation-name: ani4;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
         }
 
         #container .menu_banner .menu_banner_ani img:nth-child(3) {
@@ -355,15 +458,99 @@
             color: white;
             text-align: center;
             padding-top: 100px;
+            position: relative;
         }
 
-        #container .culture_lab p:nth-child(1) {
+        #container .culture_lab>p:nth-child(1) {
             font-size: 40px;
         }
 
-        #container .culture_lab p:nth-child(2) {
+        #container .culture_lab>p:nth-child(2) {
             font-size: 25px;
             margin-top: 30px;
+        }
+
+        #container .culture_lab .culture_lab_line {
+            background-image: url('img/block03_line.png');
+            width: 100%;
+            height: 178px;
+            position: absolute;
+            top: 400px;
+        }
+
+        #container .icon1 {
+            position: absolute;
+            top: 500px;
+            left: 550px;
+        }
+
+        @keyframes icon1_ani {
+            from {}
+
+            to {
+                top: 495px;
+                left: 550px;
+            }
+        }
+
+        #container .culture_lab .icon1:hover {
+            animation-name: icon1_ani;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #container .culture_lab .icon2 {
+            position: absolute;
+            left: 880px;
+            top: 430px;
+        }
+
+        @keyframes icon1_an2 {
+            from {}
+
+            to {
+                left: 880px;
+                top: 425px;
+            }
+        }
+
+        #container .culture_lab .icon2:hover {
+            animation-name: icon1_an2;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #container .culture_lab .icon3 {
+            position: absolute;
+            top: 500px;
+            right: 550px;
+        }
+
+        @keyframes icon1_an3 {
+            from {}
+
+            to {
+                top: 495px;
+                right: 550px;
+            }
+        }
+
+        #container .culture_lab .icon3:hover {
+            animation-name: icon1_an3;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #container .culture_lab_icon a p {
+            font-size:1.2rem;
+            margin-top:20px;
+            color:#fff;
         }
 
         /* COFFEE LAB BANNER */
@@ -472,12 +659,38 @@
         #container .info .main_news {
             width: 500px;
             height: 300px;
-            background: tomato;
+            position: relative;
         }
 
-        #container .info .main_news .notice {
-            height: 200px;
-            background: green;
+        #container .info .main_news .notice_title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #000;
+            font-weight: 600;
+            padding: 0 10px;
+        }
+
+        #container .info .main_news .notice_wrap dl {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.7);
+            font-weight: 600;
+        }
+
+        #container .info .main_news .notice_wrap dt a {
+            display: block;
+            padding: 10px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        #container .info .main_news .notice_wrap dt a:hover {
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #container .info .main_news .notice_wrap dl dd {
+            font-size: 0.8rem;
+            padding-top: 10px;
         }
 
         #container .info .main_news .brochure {
@@ -489,6 +702,10 @@
             color: #fff;
             padding: 20px;
             box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            width: 100%;
         }
 
         #container .info .main_news .brochure a {
@@ -525,6 +742,7 @@
             justify-content: space-between;
             width: 1180px;
             justify-content: center;
+            margin-bottom: 100px;
         }
 
         #container .sns .sns_img img {
@@ -547,7 +765,7 @@
                 <div class="top_right">
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">회원가입</a></li>
-                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="map.html">매장찾기</a></li>
                     <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
                     <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
                     <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
@@ -577,7 +795,7 @@
                             <li><a href="#">이디야 스낵</a></li>
                             <li><a href="#">MD</a></li>
                             <li><a href="#">비니스트</a></li>
-                            <li><a href="#">원두</a></li>
+                            <li><a href="bean.html">원두</a></li>
                         </ul>
                     </li>
                     <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
@@ -597,7 +815,7 @@
                     </li>
                     <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
                         <ul>
-                            <li><a href="#">뮤직페스타</a></li>
+                            <li><a href="musicfesta.html">뮤직페스타</a></li>
                             <li><a href="#">프로그램 및 시설 안내</a></li>
                         </ul>
                     </li>
@@ -613,7 +831,22 @@
 
         <content id="container">
             <!-- MAIN BANNER -->
-            <div class="banner"></div>
+            <div class="banner">
+                <button type="button" class="btn_prev"><span class="screen_out">이전</span></button>
+                <button type="button" class="btn_next"><span class="screen_out">다음</span></button>
+                <div class="slide_banner">
+                    <a href="#">
+                        <div class="slide_item"><img src="img/main_banner_2.jpg" alt="mainanner"></div>
+                    </a>
+                    <a href="#">
+                        <div class="slide_item"><img src="img/main_banner_1.jpg" alt="mainanner"></div>
+                    </a>
+                    <a href="#">
+                        <div class="slide_item"><img src="img/main_banner_3.png" alt="mainanner"></div>
+                    </a>
+                </div>
+            </div>
+
             <!-- DREAM FACTORY BANNER -->
             <div class="dream_factory">
                 <div class="dream_factory_text">
@@ -625,6 +858,7 @@
                 </div>
                 <div><img src="img/dream_factory.png" alt="드림팩토리 건물 이미지"></div>
             </div>
+
             <!-- MENU BANNER -->
             <div class="menu_banner">
                 <p>ALWAYS BESIDE YOU, <span class="bold">EDIYA COFFEE</span></p>
@@ -640,8 +874,8 @@
                     <img src="img/ani_object02_03.png" alt="">
                     <img src="img/ani_object02_02.png" alt="">
                 </div>
-
             </div>
+
             <!-- FRANCHISE BANNER -->
             <div class="franchise">
                 <div class="franchise_info">
@@ -651,12 +885,32 @@
                     <button><a href="#">브랜드소개</a></button>
                 </div>
             </div>
+
             <!-- CULTURE LAB BANNER -->
             <div class="culture_lab">
                 <p>EDIYA <span class="bold">CULTURE LAB</span></p>
                 <P>커피를 더 특별하게 만드는 문화가 시작되는 공간</P>
-                <div></div>
+                <div class="culture_lab_line"></div>
+                <div class="culture_lab_icon icon1">
+                    <a href="#">
+                        <img src="img/block03_icon01.png" alt="">
+                        <p>이디야 뮤직 페스타</p>
+                    </a>
+                </div>
+                <div class="culture_lab_icon icon2">
+                    <a href="">
+                        <img src="img/block03_icon02.png" alt="">
+                        <p>컬쳐랩 시설대관</p>
+                    </a>
+                </div>
+                <div class="culture_lab_icon icon3">
+                    <a href="">
+                        <img src="img/block03_icon03.png" alt="">
+                        <p>이디야 컬쳐랩</p>
+                    </a>
+                </div>
             </div>
+
             <!-- COFFEE LAB BANNER -->
             <div class="coffee_lab">
                 <p>EDIYA <span class="bold">COFFEE LAB</span></p>
@@ -673,6 +927,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- INFO BANNER -->
             <div class="info">
                 <div class="franchise_open">
@@ -687,13 +942,28 @@
                     <input type="search" placeholder="FIND A STORE">
                 </div>
                 <div class="main_news">
-                    <div class="notice">게시판</div>
+                    <div class="notice_title">이디야 소식</div>
+                    <div class="notice_wrap">
+                        <dl>
+                            <dt><a href="">이디야커피랩 영업시간 변동 안내</a></dt>
+                            <dd>2020.05.21</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="">이디야커피랩 영업시간 변동 안내</a></dt>
+                            <dd>2020.05.21</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="">이디야커피랩 영업시간 변동 안내</a></dt>
+                            <dd>2020.05.21</dd>
+                        </dl>
+                    </div>
                     <a class="brochure" href="#">
                         <p>브로슈어 다운받기</p>
                         <img src="img/main_brochure_img.png" alt="">
                     </a>
                 </div>
             </div>
+
             <!-- SNS BANNER -->
             <div class="sns">
                 <p>EDIYA COFFEE SNS</p>
@@ -703,18 +973,19 @@
                     <script>
                         for (let i = 1; i < 11; i++) {
                             document.write(
-                                liTag = `<li><a href="#"><img src="img/sns_0${i}.jpg" alt="sns_img"></a></li>`
+                                `<li><a href="#"><img src="img/sns_0${i}.jpg" alt="sns_img"></a></li>`
                             )
                         };
                     </script>
                 </ul>
             </div>
-        </content>>
+        </content>
+        
         <!-- FOOTER -->
         <footer id="footer">
             <ul class="sitemap">
                 <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">멤버스 이용약관</a></li>             
+                <li><a href="#">멤버스 이용약관</a></li>
                 <li><a href="#">가맹 안내</a></li>
                 <li><a href="#">대량쿠폰구매</a></li>
                 <li><a href="#">채용안내</a></li>

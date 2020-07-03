@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>작업중 EDIYA COFFEE</title>
+    <style>
+        /* 공통 */
+        #container .h3 {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        #container .content_line {
+            width: 20px;
+            height: 5px;
+            background: #000;
+            margin: 20px 0 30px 0;
+        }
+
+        #container {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        #container .main_img {
+            background-image: url('img/bean/bean_visual.jpg');
+            width: 100%;
+            height: 460px;
+            margin-bottom: 100px;
+        }
+
+        #container .main_img h2 {
+            text-align: center;
+            font-size: 3rem;
+            padding-top: 100px;
+            color:#fff;
+        }
+
+        #container .main_img p {
+            text-align: center;
+            font-size: 1.7rem;
+            margin-top: 20px;
+            color:#fff;
+        }
+
+        #container .main_img .main_btn {
+            margin: 100px auto;
+            width: 1080px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid #fff;
+        }
+
+        #container .main_img .main_btn button {
+            flex: 16.6%;
+            height: 40px;
+            background-color: rgb(132, 132, 124, 0);
+            border: 0px solid rgb(132, 132, 124);
+            border-right: 1px solid #fff;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        @media screen and (max-width:1100px) {
+            #container .main_img .main_btn button {
+                flex: 50%;
+                border: 1px solid #A7A7A7;
+            }
+        }
+
+        #container .main_img .main_btn button:last-child a {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #container .main_img .main_btn button a {
+            height: 100%;
+            line-height: 40px;
+            display: block;
+            color: #fff;
+        }
+
+        #container .main_img .main_btn button a:hover {
+            background-color: #fff;
+            color: #000;
+            font-weight: 900;
+        }
+
+        #container>h3 {
+            width: 60%;
+            text-align: right;
+            font-size: 0.8rem;
+            color: #A7A7A7;
+            margin: 50px auto;
+            word-spacing: 8px;
+        }
+
+        #container .promise {
+            width: 62%;
+            margin: 0 auto;
+            color: #000;
+        }
+
+        #container .promise h3{
+            text-align: center;
+        }
+
+        #container .promise .top_line {
+            width: 60%;
+            height: 1px;
+            margin: 50px auto;
+            background-color: #000;
+        }
+
+        #container .promise .promise_item {
+            display: flex;
+            margin-bottom: 50px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #container .promise .reverse {
+            flex-direction: row-reverse;
+        }
+
+        #container .promise .promise_item .promise_text {
+            width: 40%;
+            flex: none;
+        }
+
+        #container .promise .promise_item .promise_text h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        #container .promise .promise_item .promise_text .promise_line {
+            width: 50px;
+            height: 1px;
+            background: #000;
+            margin: 30px 0;
+        }
+
+        #container .promise .promise_item .promise_text p {
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        #container .promise .int {
+            border: 1px solid gray;
+            padding: 40px 30px;
+            line-height: 1.6;
+        }
+
+        /* graph */
+        #container .graph {
+            width: 62%;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        #container .graph .graph_item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container .graph .graph_item .graph_img {
+            width:50%
+        }
+
+        #container .graph .graph_item .graph_text {
+            width:50%;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        #container .graph .graph_item .graph_text p {
+            text-align: left;
+        }
+
+        /* kind */
+        #container .kind {
+            width: 62%;
+            margin: 100px auto;
+        }
+
+        #container .kind_info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        #container .kind_info dl {
+            width: 21%;
+            padding: 30px 15px 30px 20px;
+            border: 1px solid #D9D9D9;
+        }
+
+        #container .kind_info dl dt {
+            font-weight: 600;
+        }
+
+        #container .kind_info dl dd {
+            padding-top: 15px;
+            font-size: 0.8rem;
+            line-height: 1.7;
+        }
+
+        /* blending */
+        #container .blending {
+            width: 62%;
+            margin: 0 auto;
+        }
+
+        #container .blending_title {
+            width: 180px;
+            height: 40px;
+            background-color: #002F6C;
+            color: #fff;
+            line-height: 40px;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        #container .blending .blending_wrap {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #container .blending .blending_wrap .blending_items {
+            width: 30%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        #container .blending .blending_wrap .blending_items .blending_img img {
+            margin: 0 auto 20px;
+            text-align: center;
+            display: block;
+        }
+
+        #container .blending .blending_item {
+            display: flex;
+            justify-content: center;
+        }
+
+        #container .blending .blending_item div:nth-child(2) {
+            margin: 0 15px;
+        }
+
+        #container .blending .blending_item .blending_text {
+            text-align: center;
+        }
+
+        #container .blending .blending_item .blending_text>p {
+            color: #6B3E03;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        #container .blending .blending_wrap .blending_items>p {
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        /* ROASTING */
+        #container .roasting {
+            width: 62%;
+            margin: 100px auto 0;
+        }
+
+        #container .roasting ul li {
+            display: flex;
+            align-items: center;
+            background-color: #F5F5F3;
+            margin-bottom: 10px;
+        }
+
+        #container .roasting ul li div:nth-child(2) {
+            margin: 0 30px;
+        }
+
+        #container .roasting ul li .roasting_text {
+            color: rgb(70, 70, 70);
+        }
+
+        #container .roasting ul li .roasting_text>h5 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        #container .roasting ul li .roasting_text>p {
+            line-height: 1.6;
+            font-size: 0.8rem;
+        }
+
+        /* EDIYA blending */
+        #container .ediya_blending {
+            width: 62%;
+            margin: 100px auto;
+            color:#535353;
+        }
+
+        #container .ediya_blending .ediya_blending_wrap {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #D9D9D9;
+            padding: 70px 100px;
+        }
+
+        #container .ediya_blending .ediya_blending_wrap .ediya_blending_item {
+            text-align: center;
+            padding: 0 30px;
+            width: 30%;
+        }
+
+        #container .ediya_blending .ediya_blending_wrap .ediya_blending_item .ediya_blending_text {
+            margin: 30px 0;
+        }
+
+        #container .ediya_blending .ediya_blending_wrap .ediya_blending_item .ediya_blending_text>h5 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        #container .ediya_blending .ediya_blending_wrap .ediya_blending_item .ediya_blending_text>p {
+            line-height: 1.6;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <!-- TOPMENU -->
+            <ul class="topmenu">
+                <div class="top_left">
+                    <li><a href="#">브랜드 사이트</a></li>
+                    <li><a href="#">기업 사이트</a></li>
+                </div>
+                <div class="top_right">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="map.html">매장찾기</a></li>
+                    <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
+                    <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
+                    <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
+                    <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
+                    <li>
+                        <select name="language" id="">
+                            <option value="korean">Korean</option>
+                            <option value="korean">English</option>
+                            <option value="korean">Chinese</option>
+                        </select>
+                    </li>
+                </div>
+            </ul>
+            <div class="nav">
+                <h1 class="screen_out">메인 로고</h1>
+                <div class="logo"><a href="index.html"> <img src="img/top_logo.gif" alt="logo"></a></div>
+                <!-- GNB MENU -->
+                <ul class="gnb">
+                    <h2 class="screen_out">이디야 메인 메뉴</h2>
+                    <li class="menu_title"><a href="#"><span>메뉴</span></a>
+                        <ul>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="bakery.html">베이커리</a></li>
+                            <li><a href="#">이디야 스낵</a></li>
+                            <li><a href="#">MD</a></li>
+                            <li><a href="#">비니스트</a></li>
+                            <li><a href="bean.html">원두</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
+                        <ul>
+                            <li><a href="#">멤버스 소개</a></li>
+                            <li><a href="#">이디야카드</a></li>
+                            <li><a href="#">선물하기</a></li>
+                            <li><a href="#">이디야오더</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야커피랩</span></a>
+                        <ul>
+                            <li><a href="#">이디야커피랩</a></li>
+                            <li><a href="#">이디야커피랩 메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
+                        <ul>
+                            <li><a href="musicfesta.html">뮤직페스타</a></li>
+                            <li><a href="#">프로그램 및 시설 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title"><a href="#"><span>이디야 소식</span></a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!--  C O N T E N T  -->
+        
+        <content id="container">
+            <div class="main_img">
+                <h2>이디야 원두</h2>
+                <p>ALWAYS BESIDE YOU, EDIYA BEAN</p>
+                <!--  MAIN VISUAL in BUTTON -->
+                <div class="main_btn">
+                    <button><a href="#">음료</a></button>
+                    <button><a href="bakery.html">베이커리</a></button>
+                    <button><a href="#">이디야 스낵</a></button>
+                    <button><a href="#">MD</a></button>
+                    <button><a href="#">비니스트</a></button>
+                    <button><a href="bean.html">원두</a></button>
+                </div>
+            </div>
+            <h3>HOME > 메뉴 > 원두</h3>
+            <div class="promise">
+                <h3 class="h3">커피 한 잔 속에 담긴 수많은 전문가의 노력<br>
+                    이디야커피가 고객을 위해 지켜온 약속입니다.
+                </h3>
+                <div class="top_line"></div>
+                <div class="promise_item">
+                    <div class="promise_img"><img src="img/bean/bean_info_img01.png" alt=""></div>
+                    <div class="promise_text">
+                        <h4>이디야커피는 고품질의 원두만을 공급합니다.</h4>
+                        <div class="promise_line"></div>
+                        <p>원두가 가장 잘 자라는 기후와 비옥한 토양을 가진 커피벨트에서 생산된 고품질의 원두를 엄선하여 더욱 환벽한 맛과 풍미를 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="promise_item reverse">
+                    <div class="promise_img"><img src="img/bean/bean_info_img02.png" alt=""></div>
+                    <div class="promise_text">
+                        <h4>커피 본연의 신선함을 제공합니다.</h4>
+                        <div class="promise_line"></div>
+                        <p>다년간 축적된 이디야커피만의 원두 관리 노하우를 바탕으로 원두가 가진 고유의 맛과 향 그대로 신선한 커피만을 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="promise_item">
+                    <div class="promise_img"><img src="img/bean/bean_info_img03.png" alt=""></div>
+                    <div class="promise_text">
+                        <h4>커피를 연구하는 최고의 분야별 전문가와 함께 합니다.</h4>
+                        <div class="promise_line"></div>
+                        <p>수많은 전문가들이 더 좋은 커피를 만들기 위해 함께 연구하고, 지속적인 투자로 국내 최고의 시스템을 구축하고 있습니다.</p>
+                    </div>
+                </div>
+                <div class="promise_item reverse int">
+                    <div class="promise_img"><img src="img/bean/bean_intro_img.jpg" alt=""></div>
+                    <div class="promise_text">
+                        <h4>세계 각지에서 선별된<br> 이디야 최고의 원두를 소개합니다.</h4>
+                        <div class="promise_line"></div>
+                        <p>커피벨트에서 생산되는 스페셜티 급의 품질 좋은 생두를 엄선하여 까다로운 블렌딩 과정을 거쳐 이디야의 스페셜티 원두로 다시 태어납니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRAPH -->
+            <div class="graph">
+                <h3 class="h3">이디야 원두의 특징</h3>
+                <div class="content_line"></div>
+                <div class="graph_item">
+                    <div class="graph_img"><img src="img/bean/bean_key_img.jpg" alt=""></div>
+                    <div class="graph_text">
+                        <p>입안 가득 느껴지는 바디감과 부드러운 향미<br>
+                            줄어든 쓴 맛과 깔끔한 후미를 느낄 수 있는 균형잡힌 맛의 밸런스
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KIND -->
+            <div class="kind">
+                <h3 class="h3">이디야 원두의 산지별 품종 소개</h3>
+                <div class="content_line"></div>
+                <div class="kind_item">
+                    <div class="kind_img"><img src="img/bean/bean_map.jpg" alt=""></div>
+                </div>
+                <div class="kind_info">
+                    <dl>
+                        <dt>에티오피아</dt>
+                        <dd>전 세계 커피 중에서도 에티오피아 커피는 매우 색다른 향미를 지니고 있어 인기가 매우 높습니다.
+                            주요 산지는 하라(Harrar), 이르카체페(Yirgacheffe), 시다모(Sidamo), 짐마(Djimmah)이며, 그 중에서 이르가체페는 맑고 깨끗하며 복숭아와
+                            살구를 연상시키는 향미를 지니고 있습니다.
+                            차를 마시는 듯한 우아한 산미를 지녔으며, ‘커피의 귀부인’이라는 칭호를 받고 있습니다.</dd>
+                    </dl>
+                    <dl>
+                        <dt>콜롬비아</dt>
+                        <dd>마일드 커피의 대명사이며, 세계 3위의 커피 생산국입니다.
+                            주로 산악지방에서생산되며, 커피 생두는 크기가 크고 깨끗하며 연녹색입니다. 향기가 독특하고 쌉싸름함이 느껴지며, 스트레이트로 마시거나 블렌딩으로 많이 사용하고
+                            있습니다.
+                            콜롬비아 커피는 생두의 크기로 등급을 분류하며, 수프리모(Supremo) 등급이 유명합니다.</dd>
+                    </dl>
+                    <dl>
+                        <dt>케냐</dt>
+                        <dd>아프리카의 대표적인 커피 중 하나입니다.
+                            해발고도 1,500~2,000m 사이에서 재배되며, 진한 청녹색의 케냐 커피는 고급 커피로 유명 합니다.
+                            독특한 쌉싸름, 와인같은 진한 풍미, 과일 같은 신맛을 느낄 수 있습니다.
+                            케냐 커피는 생두의 크기로 등급을 분류하며, 케냐 AA와 케냐 PB(Peaberry, 피베리) 등급이 유명합니다.</dd>
+                    </dl>
+                    <dl>
+                        <dt>과테말라</dt>
+                        <dd>커피 재배를 하기에 최적의 조건을 갖춘 나라 중 하나입니다. 화산 폭발이 일어나면서 나온 질소를 비옥한 토양 커피 나무가 흡수하여, 부드러우면서도 바디감이 강한
+                            스모크향의 풍부한 맛이 가득한 과테말라 커피를 만들어 줍니다.
+                            과테말라 커피는 생두의 등급을 재배지의 해발 고도로 분류하며, SHB(해발고도 1,300~1500m) 등급이 가장 좋습니다.</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- Blending -->
+            <div class="blending">
+                <div class="blending_title">이디야 블렌딩 원두</div>
+                <div class="blending_wrap">
+                    <div class="blending_items">
+                        <div class="blending_img"><img src="img/bean/bean_blending_pro01.jpg" alt=""></div>
+                        <div class="blending_item">
+                            <div class="blending_text">
+                                <h5>이디야 로스트</h5>
+                                <p>EDIYA ROAST</p>
+                            </div>
+                            <div><a href=""><img src="img/bean/bean_blending_icon.gif" alt=""></a></div>
+                            <div><img src="img/bean/bean_blending_attri01.gif" alt=""></div>
+                        </div>
+                        <p>프렌치 로스팅의 깊고 진한 풍미가 느껴지는 커피. 다크 초코렛의 맛과 스모키 향이 어우러져 입안 가득 느껴지는 무게감 있는 커피입니다.</p>
+                    </div>
+                    <div class="blending_items">
+                        <div class="blending_img"><img src="img/bean/bean_blending_pro01.jpg" alt=""></div>
+                        <div class="blending_item">
+                            <div class="blending_text">
+                                <h5>이디야 바이올렛</h5>
+                                <p>EDIYA VIOLET</p>
+                            </div>
+                            <div><a href=""><img src="img/bean/bean_blending_icon.gif" alt=""></a></div>
+                            <div><img src="img/bean/bean_blending_attri01.gif" alt=""></div>
+                        </div>
+                        <p>시티 로스팅으로 과일의 밝고 상큼한 산미와 은은한 풍미가 느껴지는 커피로 섬세함과 부드러운 향을 느낄 수 있습니다.</p>
+                    </div>
+                    <div class="blending_items">
+                        <div class="blending_img"><img src="img/bean/bean_blending_pro01.jpg" alt=""></div>
+                        <div class="blending_item">
+                            <div class="blending_text">
+                                <h5>이디야 다크블루</h5>
+                                <p>EDIYA DARKBLUE</p>
+                            </div>
+                            <div><a href=""><img src="img/bean/bean_blending_icon.gif" alt=""></a></div>
+                            <div><img src="img/bean/bean_blending_attri01.gif" alt=""></div>
+                        </div>
+                        <p>풀시티 로스팅을 통해 은은한 카라멜과 볶은 견과류의 고소한 향이 어우러진 커피. 마시는 동안 입안에서 느껴지는 중후하면서도 균형감이 매력적인 커피입니다</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- roasting -->
+            <div class="roasting">
+                <h3 class="h3">이디야 로스팅</h3>
+                <div class="content_line"></div>
+                <ul>
+                    <li>
+                        <div><img src="img/bean/bean_loasting_01.jpg" alt=""></div>
+                        <div><img src="img/bean/bean_step_num01.jpg" alt=""></div>
+                        <div class="roasting_text">
+                            <h5>생두 선별</h5>
+                            <p>세계 커피 산지 별 품질이 우수한 제품들을 선별하여 저온 보관을 합니다.<br>
+                                커피 본연의 맛과 향에 영향을 줄 수 있는 이물질(나뭇가지, 잎사귀, 돌 등)을 제거합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="img/bean/bean_loasting_02.jpg" alt=""></div>
+                        <div><img src="img/bean/bean_step_num02.jpg" alt=""></div>
+                        <div class="roasting_text">
+                            <h5>샘플 로스팅</h5>
+                            <p>최고의 바리스타와 서비스로 고객에게 감동을 드리는 커피, 이디야커피 입니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="img/bean/bean_loasting_03.jpg" alt=""></div>
+                        <div><img src="img/bean/bean_step_num03.jpg" alt=""></div>
+                        <div class="roasting_text">
+                            <h5>블랜딩 커핑</h5>
+                            <p>고객에게 더 맛있는 커피를 제공하기 위해 여러 번의 커핑작업과 블랜딩을 통한 테스트를 시행합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="img/bean/bean_loasting_04.jpg" alt=""></div>
+                        <div><img src="img/bean/bean_step_num04.jpg" alt=""></div>
+                        <div class="roasting_text">
+                            <h5>제품 로스팅</h5>
+                            <p>커피 본연의 맛과 향을 더욱 느낄 수 있도록 전용 로스팅 기기로 제품을 생산합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="img/bean/bean_loasting_05.jpg" alt=""></div>
+                        <div><img src="img/bean/bean_step_num05.jpg" alt=""></div>
+                        <div class="roasting_text">
+                            <h5>매장 공급</h5>
+                            <p>신속한 제품 포장을 하여 커피가 가장 신선하고 맛과 향미가 가장 풍부한 기간에 이디야 매장에 공급합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="img/bean/bean_loasting_06.jpg" alt=""></div>
+                        <div><img src="img/bean/bean_step_num06.jpg" alt=""></div>
+                        <div class="roasting_text">
+                            <h5>고객 판매</h5>
+                            <p>최고의 바리스타와 서비스로 고객에게 감동을 드리는 커피, 이디야커피 입니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- EDIYA BLENDING -->
+            <div class="ediya_blending">
+                <h3 class="h3">이디야 블랜딩</h3>
+                <div class="content_line"></div>
+                <div class="ediya_blending_wrap">
+                    <div class="ediya_blending_item">
+                        <div class="ediya_blending_img"><img src="img/bean/bean_blending_icon01.jpg" alt=""></div>
+                        <div class="ediya_blending_text">
+                            <h5>적합한 생두 선택</h5>
+                            <p>각 산지별 커피의 특성을 이해한 후 블렌딩에 적합한 최고의 원두를 선별합니다.</p>
+                        </div>
+                    </div>
+                    <div class="ediya_blending_item">
+                        <div class="ediya_blending_img"><img src="img/bean/bean_blending_icon02.jpg" alt=""></div>
+                        <div class="ediya_blending_text">
+                            <h5>엄격한 품질 관리</h5>
+                            <p>1년 365일 언제나 좋은 품질의 커피를 만들기 위해 엄격한 품질 관리를 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="ediya_blending_item">
+                        <div class="ediya_blending_img"><img src="img/bean/bean_blending_icon03.jpg" alt=""></div>
+                        <div class="ediya_blending_text">
+                            <h5>최적의 로스팅 노하우</h5>
+                            <p>커피 본연의 맛을 추출하기 위한 최적의 로스팅을 합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </content>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <ul class="sitemap">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">멤버스 이용약관</a></li>
+                <li><a href="#">가맹 안내</a></li>
+                <li><a href="#">대량쿠폰구매</a></li>
+                <li><a href="#">채용안내</a></li>
+                <li><a href="#">고객의 소리</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">점주의 방</a></li>
+            </ul>
+            <div class="footer_logo"><img src="img/bottom_logo.gif" alt="logo"></div>
+            <ul class="footer_info">
+                <li>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</li>
+                <li>TEL : 02-543-6467</li>
+                <li>FAX : 02-543-7191</li>
+                <li>사업자등록번호 : 107-86-16302</li>
+                <li>통신판매업 신고 : 강남 제 002519호</li>
+                <li>대표이사 : 문창기</li>
+            </ul>
+            <p>ⓒ 2017 EDIYA COFFEE CONPANY. ALL RIGTHS RECERVED</p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,4 +1,16 @@
-/* 공통사항 */
+/* COMMON */
+.screen_out {
+    overflow: hidden;
+    text-indent: -9999px;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 body {
     width: 100%;
 }
@@ -10,11 +22,6 @@ body {
 a {
     text-decoration: none;
     color: black;
-}
-
-.screen_out {
-    overflow: hidden;
-    text-indent: -9999px;
 }
 
 /* HEADER */
@@ -102,6 +109,7 @@ a {
     overflow: hidden;
     margin: 0 auto;
     padding-left: 200px;
+    /* transition: all .3s; */
 }
 
 #header .nav .gnb:hover {
@@ -110,15 +118,12 @@ a {
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-#header .nav .gnb .menu_title ul {
-    /* background:tomato; */
-}
-
 #header .nav .gnb .menu_title a {
     display: block;
     margin-right: 60px;
     color: #848484;
     font-weight: 500;
+    /* background-color:tomato; */
 }
 
 #header .nav .gnb .menu_title a span {
@@ -130,6 +135,7 @@ a {
 #header .nav .gnb .menu_title li a {
     padding: 10px 0;
     font-size: 13px;
+
 }
 
 /* FOOTER */
@@ -137,7 +143,6 @@ a {
     background-color: #262626;
     width: 100%;
     height: 250px;
-    margin-top: 100px;
 }
 
 #footer .sitemap {
