@@ -9,6 +9,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
     <title>작업중 EDIYA COFFEE 수정</title>
     <!-- https://www.ediya.com -->
     <style>
@@ -27,7 +31,6 @@
         /* MAIN BANNER */
         #container .banner {
             position: relative;
-            height: 621px;
             overflow: hidden;
         }
 
@@ -84,8 +87,9 @@
         }
 
         #container .dream_factory img {
-            position: relative;
-            bottom: 0px;
+            width: 70%;
+            /* position: relative; */
+            /* bottom: 0px; */
             position: absolute;
             right: -170px;
             bottom: 0px;
@@ -107,67 +111,7 @@
             margin-right: 10px;
             border: 1px solid #fff;
             padding: 0;
-        }
-
-        #container .dream_factory button a {
-            display: block;
-            width: 200px;
-            line-height: 50px;
-            color: white;
-        }
-
-        #container .dream_factory button a:hover {
-            background-color: #fff;
-            color: rgb(5, 46, 107);
-        }
-
-        /* DREAM FACTORY BANNER */
-        #container .dream_factory {
-            background-image: url('img/dream_factory_bg.gif');
-            height: 450px;
-            display: flex;
-            padding-top: 40px;
-            justify-content: space-around;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #container .dream_factory .dream_factory_text {
-            margin-top: 30px;
-        }
-
-        #container .dream_factory .dream_factory_text p:nth-child(2) {
-            font-size: 30px;
-        }
-
-        #container .dream_factory .dream_factory_text p:nth-child(3) {
-            margin-top: 30px;
-        }
-
-        #container .dream_factory img {
-            position: relative;
-            bottom: 0px;
-            position: absolute;
-            right: -170px;
-            bottom: 0px;
-        }
-
-        #container em {
-            font-size: 40px;
-        }
-
-        #container .dream_factory p,
-        em,
-        button {
-            color: white;
-        }
-
-        #container .dream_factory button {
-            background-color: rgba(0, 0, 0, 0);
-            margin-top: 40px;
-            margin-right: 10px;
-            border: 1px solid #fff;
-            padding: 0;
+            /* display:block; */
         }
 
         #container .dream_factory button a {
@@ -283,6 +227,7 @@
         }
 
         #container .menu_banner .menu_banner_ani img:nth-child(3) {
+            /* width:20%; */
             position: absolute;
             top: -65px;
             left: 370px;
@@ -421,7 +366,7 @@
         }
 
         #container .franchise .franchise_info p:nth-child(1) {
-            font-size: 40px;
+            font-size: 3rem;
         }
 
         #container .franchise .franchise_info p:nth-child(2) {
@@ -452,7 +397,11 @@
 
         /* CULTURE LAB BANNER */
         #container .culture_lab {
+            width:100%;
             background-image: url('img/block03_bg.jpg');
+            background-size:cover;
+            background-position:center right;
+            background-repeat: no-repeat;
             height: 800px;
             background-attachment: fixed;
             color: white;
@@ -749,8 +698,75 @@
             width: 233px;
             padding: 1px;
         }
+
+        /* slider 부분 */
+
+        .banner .bx-wrapper {
+            border: 0;
+            margin-bottom: 0;
+        }
+
+        .banner .bx-wrapper .bx-next {
+            background: url('img/main_visual_next.png');
+            width: 24px;
+            height: 45px;
+        }
+
+        .banner .bx-wrapper .bx-prev {
+            background: url('img/main_visual_prev.png');
+            width: 24px;
+            height: 45px;
+        }
+
+        .banner .bx-wrapper .bx-pager,
+        .bx-wrapper .bx-controls-auto {
+            bottom: 30px;
+        }
+
+        /* 420px이하 */
+        @media screen and (max-width:640px) {
+
+            /* 드림 팩토리 */
+            #container .dream_factory {
+                flex: none;
+                background: tomato;
+            }
+
+            #container .dream_factory button {
+                display: block;
+                margin: 10px auto;
+            }
+
+            #container .dream_factory img {
+                width: 100%;
+                left: 0;
+            }
+
+            #container .dream_factory .dream_factory_text p:nth-child(3) {
+                width: 80%;
+                margin: 40px auto;
+                line-height: 1.5rem;
+                text-align: center;
+            }
+
+            /* 프랜차이즈 */
+            #container .franchise .franchise_info button{
+                display: block;
+                margin: 10px auto;
+            }
+
+            #container .franchise .franchise_info p:nth-child(2){
+                width: 80%;
+                margin: 40px auto;
+                line-height: 1.5rem;
+                text-align: center;
+
+            }
+        }
+
+        /* 421px 이상 980px이하 */
+        @media screen and (min-width:641px) and (max-weidth:980px) {}
     </style>
-    <script></script>
 </head>
 
 <body>
@@ -835,15 +851,9 @@
                 <button type="button" class="btn_prev"><span class="screen_out">이전</span></button>
                 <button type="button" class="btn_next"><span class="screen_out">다음</span></button>
                 <div class="slide_banner">
-                    <a href="#">
-                        <div class="slide_item"><img src="img/main_banner_2.jpg" alt="mainanner"></div>
-                    </a>
-                    <a href="#">
-                        <div class="slide_item"><img src="img/main_banner_1.jpg" alt="mainanner"></div>
-                    </a>
-                    <a href="#">
-                        <div class="slide_item"><img src="img/main_banner_3.png" alt="mainanner"></div>
-                    </a>
+                    <div><img src="img/main_banner_1.jpg" alt="mainanner"></div>
+                    <div><img src="img/main_banner_2.jpg" alt="mainanner"></div>
+                    <div><img src="img/main_banner_3.png" alt="mainanner"></div>
                 </div>
             </div>
 
@@ -856,7 +866,7 @@
                     <button type="button"><a href="#">드림 팩토리</a></button>
                     <button type="button"><a href="#">드림 물류센터</a></button>
                 </div>
-                <div><img src="img/dream_factory.png" alt="드림팩토리 건물 이미지"></div>
+                <div class="dream_img"><img src="img/dream_factory.png" alt="드림팩토리 건물 이미지"></div>
             </div>
 
             <!-- MENU BANNER -->
@@ -1008,7 +1018,6 @@
 
 </body>
 <script>
-
     // 스크롤 이벤트 관련
     window.addEventListener('scroll', scrollWork);
 
@@ -1017,12 +1026,22 @@
 
     function scrollWork() {
 
-        if(html.scrollTop > 130){
+        if (html.scrollTop > 130) {
             nav.classList.add('fix');
-        }else{
+        } else {
             nav.classList.remove('fix');
         }
     }
+
+    $(document).ready(function () {
+
+        const opt = {
+            auto: true,
+        }
+
+
+        $('.slide_banner').bxSlider(opt);
+    });
 </script>
 
 </html>
