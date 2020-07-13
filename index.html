@@ -9,6 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -88,8 +90,6 @@
 
         #container .dream_factory img {
             width: 70%;
-            /* position: relative; */
-            /* bottom: 0px; */
             position: absolute;
             right: -170px;
             bottom: 0px;
@@ -111,7 +111,6 @@
             margin-right: 10px;
             border: 1px solid #fff;
             padding: 0;
-            /* display:block; */
         }
 
         #container .dream_factory button a {
@@ -131,7 +130,16 @@
             height: 800px;
             background: #bbe5fb;
             background: url('img/block02_bg_ani.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
             overflow: hidden;
+            position: relative;
+        }
+
+        #container .menu_banner .bold {
+            color: #243c86;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 900;
         }
 
         #container .menu_banner P:nth-child(1) {
@@ -171,182 +179,172 @@
             background-color: #243C86;
         }
 
-        #container .menu_banner .menu_banner_ani {
-            background: tomato;
-            position: relative;
-            /* overflow: hidden; */
+        #container .menu_banner .ani_object01 {
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 800px;
+            border:10px solid lime;
+        }
+
+        #container .menu_banner .ani_object02 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 800px;
+            border:10px solid blue;
+        }
+
+        #container .menu_banner img {
+            /* width:10%; */
         }
 
         @keyframes ani1 {
             from {}
 
             to {
-                top: -310px;
+                top: 40px;
                 left: 200px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(1) {
+        #container .menu_banner .ani_object01 img:nth-child(1) {
             position: absolute;
-            top: -300px;
+            top: 45px;
             left: 200px;
             animation-name: ani1;
             animation-duration: 1s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+            border: 5px solid red;
         }
 
         @keyframes ani2 {
             from {}
 
             to {
-                top: -210px;
-                left: 330px;
+                top: 140px;
+                left: 310px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(2) {
+        #container .menu_banner .ani_object01 img:nth-child(2) {
             position: absolute;
-            top: -200px;
-            left: 330px;
+            top: 150px;
+            left: 310px;
             animation-name: ani2;
             animation-duration: 1s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
+            border: 5px solid tomato;
         }
 
         @keyframes ani3 {
             from {}
 
             to {
-                top: -75px;
+                top: 280px;
                 left: 370px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(3) {
-            /* width:20%; */
+        #container .menu_banner .ani_object01 img:nth-child(3) {
             position: absolute;
-            top: -65px;
+            top: 290px;
             left: 370px;
             animation-name: ani3;
             animation-duration: 1.2s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+            border: 5px solid yellow;
         }
 
         @keyframes ani4 {
             from {}
 
             to {
-                top: -190px;
-                left: 1250px;
+                top: 180px;
+                right: -140px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(4) {
+        #container .menu_banner .ani_object02 img:nth-child(1) {
             position: absolute;
-            top: -180px;
-            left: 1250px;
+            top: 170px;
+            right: -140px;
             animation-name: ani4;
             animation-duration: 1.2s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
-        }
-
-        #container .menu_banner .menu_banner_ani img:nth-child(3) {
-            position: absolute;
-            top: -65px;
-            left: 370px;
-            animation-name: ani3;
-            animation-duration: 1.2s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-
-        @keyframes ani4 {
-            from {}
-
-            to {
-                top: -190px;
-                left: 1250px;
-            }
-        }
-
-        #container .menu_banner .menu_banner_ani img:nth-child(4) {
-            position: absolute;
-            top: -180px;
-            left: 1250px;
-            animation-name: ani4;
-            animation-duration: 1.2s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate-reverse;
+            border: 5px solid green;
         }
 
         @keyframes ani5 {
             from {}
 
             to {
-                top: -310px;
-                left: 1420px;
+                top: 40px;
+                right: 380px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(5) {
+        #container .menu_banner .ani_object02 img:nth-child(2) {
             position: absolute;
-            top: -300px;
-            left: 1420px;
+            top: 50px;
+            right: 380px;
             animation-name: ani5;
-            animation-duration: 1s;
+            animation-duration: 1.1s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+            border: 5px solid blue;
         }
 
         @keyframes ani6 {
             from {}
 
             to {
-                top: -140px;
-                right: 130px;
+                top: 195px;
+                right: 120px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(6) {
+        #container .menu_banner .ani_object02 img:nth-child(3) {
             position: absolute;
-            top: -130px;
-            right: 130px;
+            top: 200px;
+            right: 120px;
             animation-name: ani6;
-            animation-duration: 1s;
+            animation-duration: 1.2s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
+            border: 5px solid rgb(4, 4, 90);
         }
 
         @keyframes ani7 {
             from {}
 
             to {
-                top: -210px;
-                left: 1780px;
+                top: 145px;
+                right: 70px;
             }
         }
 
-        #container .menu_banner .menu_banner_ani img:nth-child(7) {
+        #container .menu_banner .ani_object02 img:nth-child(4) {
             position: absolute;
-            top: -200px;
-            left: 1780px;
+            top: 140px;
+            right: 70px;
             animation-name: ani7;
             animation-duration: 1s;
-            animation-timing-function: linear;
+            animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+            border: 5px solid purple;
         }
 
         /* FRANCHISE BANNER */
@@ -397,10 +395,10 @@
 
         /* CULTURE LAB BANNER */
         #container .culture_lab {
-            width:100%;
+            width: 100%;
             background-image: url('img/block03_bg.jpg');
-            background-size:cover;
-            background-position:center right;
+            background-size: cover;
+            background-position: center right;
             background-repeat: no-repeat;
             height: 800px;
             background-attachment: fixed;
@@ -700,7 +698,6 @@
         }
 
         /* slider 부분 */
-
         .banner .bx-wrapper {
             border: 0;
             margin-bottom: 0;
@@ -723,13 +720,28 @@
             bottom: 30px;
         }
 
-        /* 420px이하 */
+        /* 640px이하 */
         @media screen and (max-width:640px) {
+
+            /* header */
+            #header .nav {
+                font-size: 0;
+            }
+
+            #header .topmenu {
+                border-bottom: 1px solid #eaeaea;
+                padding: 10px
+            }
+
+            #header .topmenu .top_right {
+                display: none;
+            }
 
             /* 드림 팩토리 */
             #container .dream_factory {
                 flex: none;
                 background: tomato;
+                height: 100vw;
             }
 
             #container .dream_factory button {
@@ -742,6 +754,10 @@
                 left: 0;
             }
 
+            #container .dream_factory .dream_factory_text {
+                text-align: center;
+            }
+
             #container .dream_factory .dream_factory_text p:nth-child(3) {
                 width: 80%;
                 margin: 40px auto;
@@ -749,23 +765,110 @@
                 text-align: center;
             }
 
+            /* 메뉴 배너 */
+            /* #container .menu_banner {
+                background-color: tomato;
+            }
+
+            #container .menu_banner P:nth-child(1) {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            #container .menu_banner P:nth-child(3) {
+                font-size: 1.2rem;
+            }
+
             /* 프랜차이즈 */
-            #container .franchise .franchise_info button{
+            #container .franchise .franchise_info button {
                 display: block;
                 margin: 10px auto;
             }
 
-            #container .franchise .franchise_info p:nth-child(2){
+            #container .franchise .franchise_info p:nth-child(2) {
                 width: 80%;
                 margin: 40px auto;
                 line-height: 1.5rem;
                 text-align: center;
-
             }
+
+            */
         }
 
-        /* 421px 이상 980px이하 */
-        @media screen and (min-width:641px) and (max-weidth:980px) {}
+        /* 641px 이상 980px이하 */
+        @media screen and (min-width:641px) and (max-width:980px) {
+
+            /* header */
+            #header .nav {
+                font-size: 0;
+            }
+
+            #header .topmenu {
+                border-bottom: 1px solid #eaeaea;
+                padding: 10px
+            }
+
+            #header .topmenu .top_right {
+                display: none;
+            }
+
+            /* dream Factory */
+            #container .dream_factory {
+                flex: none;
+                background: green;
+                height: 80vw;
+                margin: 0 auto;
+            }
+
+            #container .dream_factory button {
+                margin: 10px 3px;
+            }
+
+            #container .dream_factory img {
+                width: 100%;
+                left: 0;
+            }
+
+            #container .dream_factory .dream_factory_text {
+                text-align: center;
+            }
+
+            #container .dream_factory .dream_factory_text p:nth-child(3) {
+                width: 80%;
+                margin: 40px auto;
+                line-height: 1.5rem;
+                text-align: center;
+            }
+
+            /* 메뉴 섹션 */
+            #container .menu_banner .ani_object01 {
+                top: 50px;
+                left:-200px;
+                border: 10px solid lime;
+                /* height:300px; */
+            }
+
+            #container .menu_banner .ani_object02 {
+                top: 120px;
+                right:150px;
+                border: 10px solid blue;
+                /* height:300px; */
+            }
+
+            #container .menu_banner .ani_object01 img:nth-child(1),
+            #container .menu_banner .ani_object01 img:nth-child(2){
+                width:15%;
+            }
+
+            #container .menu_banner .ani_object01 img:nth-child(3){
+                width:50%;
+            }
+
+            #container .menu_banner .ani_object02 img:nth-child(1){
+                width:100%;
+            }
+
+        }
     </style>
 </head>
 
@@ -875,10 +978,12 @@
                 <div class="line"></div>
                 <p>늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.</p>
                 <button type="button"><a href="#">메뉴보기</a></button>
-                <div class="menu_banner_ani">
+                <div class="menu_banner_ani ani_object01">
                     <img src="img/ani_object01_01.png" alt="">
                     <img src="img/ani_object01_02.png" alt="">
                     <img src="img/ani_object01.png" alt="">
+                </div>
+                <div class="menu_banner_ani ani_object02">
                     <img src="img/ani_object02.png" alt="">
                     <img src="img/ani_object02_01.png" alt="">
                     <img src="img/ani_object02_03.png" alt="">
@@ -1038,7 +1143,6 @@
         const opt = {
             auto: true,
         }
-
 
         $('.slide_banner').bxSlider(opt);
     });

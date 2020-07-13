@@ -91,6 +91,7 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    padding-left:15px;
 }
 
 #header .nav.fix {
