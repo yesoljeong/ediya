@@ -28,16 +28,19 @@ a {
 #header {
     /* margin: 0 auto; */
     /* height: 130px; */
+    position: relative;
+    height:110px;
 }
 
 #header .topmenu {
-    width:1180px; 
+    width: 1180px;
     /* width:70%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top : 20px;
-    margin : 0 auto;
+    padding-top: 20px;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 #header .topmenu .top_left {
@@ -90,38 +93,48 @@ a {
 #header .nav {
     display: flex;
     justify-content: center;
-    align-items: center;
     z-index: 999;
-    padding-left:15px;
+    padding-left: 15px;
+    height:40px;
+    background-color:#fff;
+    position:absolute;
+    left:0;
+    right:0;
+    transition: height .2s ease-in-out;
+    overflow: hidden;
+}
+
+#header .nav:hover {
+    height:300px;
+    margin:0;
 }
 
 #header .nav.fix {
-    background-color:#fff;
+    background-color: #fff;
     position: fixed;
-    top:0;
-    right:0;
-    left:0;
+    top: 0;
+    right: 0;
+    left: 0;
     border-bottom: 1px solid #EAEAEA;
 }
 
 #header .nav .logo {
-    padding-right : 50px;
-    /* border: 10px solid red; */
+    padding-right: 50px;
 }
 
 #header .nav .gnb {
-    width:900px;
+    width: 900px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height:80px;
+    background-color:#fff;
 }
 
-/* #header .nav .gnb:hover {
-    height: 300px;
-    z-index: 999;
-    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
-} */
+#header .nav .gnb .menu_title li{
+}
+
+#header .nav .gnb .menu_title ul{
+    margin-top:30px;
+}
 
 #header .nav .gnb .menu_title a {
     display: inline-block;
@@ -148,6 +161,7 @@ a {
 #footer .sitemap {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     height: 60px;
     border-bottom: 1px solid #818181;
@@ -155,7 +169,7 @@ a {
 
 #footer .sitemap li {
     margin-right: 30px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 700;
 }
 
@@ -169,20 +183,26 @@ a {
 }
 
 #footer .footer_info {
-    width: 790px;
+    width: 50%;
     margin: 0 auto;
     color: #818181;
     font-size: 0.7em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    flex-wrap: wrap;
+    border: 1px solid lime;
+    line-height: 1.2rem;
 }
 
 #footer .footer_info li::after {
     content: "|";
     margin: 20px;
+}
+
+#footer .footer_info li:nth-child(3):after,
+#footer .footer_info li:last-child::after {
+    content: "";
 }
 
 #footer p {
