@@ -21,6 +21,7 @@
         /* container 공통 사항 */
         #container .bold {
             font-weight: 900;
+            font-family: 'Nunito Sans', sans-serif;
         }
 
         #container .line {
@@ -359,16 +360,15 @@
             position: absolute;
             right: 100px;
             top: 100px;
-            background-color: tomato;
         }
 
         #container .franchise .franchise_info p:nth-child(1) {
             font-size: 2.7rem;
             width: 550px;
+            margin: 0 auto;
         }
 
         #container .franchise .franchise_info p:nth-child(2) {
-            /* margin-top: 40px; */
             line-height: 25px;
             width: 350px;
             margin: 40px auto;
@@ -406,12 +406,13 @@
             background-attachment: fixed;
             color: white;
             text-align: center;
-            padding-top: 100px;
-            position: relative;
         }
 
         #container .culture_lab>p:nth-child(1) {
             font-size: 40px;
+            padding-top: 100px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 200;
         }
 
         #container .culture_lab>p:nth-child(2) {
@@ -421,39 +422,37 @@
 
         #container .culture_lab .culture_lab_line {
             background-image: url('img/block03_line.png');
-            background-position: center;
+            background-position: center center;
             width: 100%;
             height: 178px;
-            position: absolute;
-            top: 350px;
+            margin-top: 160px;
         }
 
-        #container .culture_lab ul{
-            display:flex;
+        #container .culture_lab ul {
+            display: flex;
             justify-content: space-around;
-            border:1px solid blue;
-            width:80%;
+            border: 1px solid blue;
+            width: 950px;
             margin: 0 auto;
-            margin-top:300px;
+            margin-top: -60px;
         }
 
-        #container .culture_lab ul li{
-            width:33.3333%;
-            border:1px solid lime;
+        #container .culture_lab ul li {
+            width: 33.3333%;
+            border: 1px solid lime;
+            float: left;
+            box-sizing: border-box;
         }
 
-        #container .icon1 {
-            background-color: tomato;
-        }
+        #container .icon1 {}
 
-        /* @keyframes icon1_ani {
+        @keyframes icon1_ani {
             from {}
 
             to {
-                top: 495px;
-                left: 550px;
+                margin-top: -10px
             }
-        } */
+        }
 
         #container .culture_lab .icon1:hover {
             animation-name: icon1_ani;
@@ -464,15 +463,14 @@
         }
 
         #container .culture_lab .icon2 {
-            
+            margin-top: -70px;
         }
 
         @keyframes icon1_an2 {
             from {}
 
             to {
-                left: 880px;
-                top: 425px;
+                margin-top: -80px;
             }
         }
 
@@ -484,16 +482,13 @@
             animation-direction: alternate;
         }
 
-        #container .culture_lab .icon3 {
-            
-        }
+        #container .culture_lab .icon3 {}
 
         @keyframes icon1_an3 {
             from {}
 
             to {
-                top: 495px;
-                right: 550px;
+                margin-top: -10px
             }
         }
 
@@ -506,9 +501,10 @@
         }
 
         #container .culture_lab_icon a p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-top: 20px;
             color: #fff;
+            transition: all .5 linear;
         }
 
         /* COFFEE LAB BANNER */
@@ -517,49 +513,100 @@
             text-align: center;
         }
 
-        #container .coffee_lab p:nth-child(1) {
+        #container .coffee_lab>p:nth-child(1) {
             font-size: 40px;
             margin-top: 100px;
+            font-weight: 200;
+            font-family: 'Nunito Sans', sans-serif;
         }
 
-        #container .coffee_lab p:nth-child(2) {
+        #container .coffee_lab>p:nth-child(2) {
             font-size: 25px;
             margin-top: 20px;
             margin-bottom: 80px;
         }
 
         #container .coffee_lab .coffee_lab_img {
-            margin-top: 80px;
-            height: 720px;
+            height: 40vw;
             position: relative;
+            width: 60%;
+            margin: 80px auto;
         }
 
-        #container .coffee_lab .coffee_lab_img>div:nth-child(1) {
-            background-image: url('img/block05_img02.jpg');
-            width: 630px;
-            height: 640px;
+        #container .coffee_lab .coffee_lab_img .back_img1 {
             background-color: #fff;
-            position: absolute;
-            left: 19%;
+            position: relative;
+            left: 0;
             z-index: 1;
+            transition: transform .3s linear;
+            overflow: hidden;
+            width: 53%;
+            height: auto;
+            box-sizing: border-box;
         }
 
-        #container .coffee_lab .coffee_lab_img>div:nth-child(2) {
-            background-image: url('img/block05_img01.jpg');
-            width: 630px;
-            height: 640px;
-            position: absolute;
-            left: 49%;
-            bottom: 0;
+        #container .coffee_lab .coffee_lab_img .back_img1 img {
+            transition: transform .5s linear;
+            width: 100%;
+            vertical-align: top;
         }
 
-        #container .coffee_lab .coffee_lab_img div p {
+        #container .coffee_lab .coffee_lab_img .back_img1 img:hover {
+            transform: scale(1.05);
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img1 p {
             text-align: center;
             font-size: 1.3rem;
-            margin-top: 500px;
-            margin-bottom: 20px;
             font-weight: 900;
             color: #fff;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%);
+            border-bottom: 0px solid #fff;
+            transition: all.3s linear
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img1:hover p {
+            border-bottom: 8px solid #fff;
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: transform .3s linear;
+            overflow: hidden;
+            width: 53%;
+            box-sizing: border-box;
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img2 img {
+            transition: all .5s linear;
+            width: 100%;
+            height: auto;
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img2 img:hover {
+            transform: scale(1.05);
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img2 p {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #fff;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%);
+            border-bottom: 0px solid #fff;
+            transition: all .3s linear;
+            transform: translate(-50%);
+        }
+
+        #container .coffee_lab .coffee_lab_img .back_img2:hover p {
+            border-bottom: 8px solid #fff;
         }
 
         #container .coffee_lab .coffee_lab_line {
@@ -573,11 +620,20 @@
         #container .info {
             margin: 0 auto;
             width: 1190px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 100px;
             color: #fff;
+            box-sizing: border-box;
+        }
+
+        #container .info::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #container .info>div {
+            float: left;
+            box-sizing: border-box;
+            height: 300px;
         }
 
         #container .info .title {
@@ -588,34 +644,38 @@
         #container .info .line {
             background: #fff;
             margin: 30px 0;
-            width: 70px;
+            width: 50px;
         }
 
         #container .info .franchise_open {
             background-image: url('img/main_franchise_bg.jpg');
-            width: 300px;
-            height: 300px;
+            width: 28%;
+            margin-right: 1%;
             padding-left: 30px;
-            box-sizing: border-box;
         }
 
         #container .info .store_search {
             background-image: url('img/main_store_bg.jpg');
             background-position: center;
-            width: 300px;
-            height: 300px;
+            width: 28%;
             padding-left: 30px;
+            margin-right: 1%;
             box-sizing: border-box;
         }
 
         #container .info .store_search input {
-            margin-top: 30px;
-            width: 240px;
+            margin-top: 40px;
+            width: 85%;
             height: 40px;
+            background-color: #1C3269;
+            border: 3px solid #fff;
+            color: #fff;
+            padding-left: 20px;
+            margin: 40px auto;
         }
 
         #container .info .main_news {
-            width: 500px;
+            width: 42%;
             height: 300px;
             position: relative;
         }
@@ -697,15 +757,18 @@
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             width: 1180px;
-            justify-content: center;
+            justify-content: space-between;
             margin-bottom: 100px;
         }
 
+        #container .sns .sns_img li {
+            width: 19.5%;
+            box-sizing: border-box;
+        }
+
         #container .sns .sns_img img {
-            width: 233px;
-            padding: 1px;
+            width: 100%;
         }
 
         /* slider 부분 */
@@ -746,7 +809,8 @@
 
             #header .topmenu {
                 border-bottom: 1px solid #eaeaea;
-                padding: 10px
+                padding: 10px;
+                width: 100%;
             }
 
             #header .topmenu .top_right {
@@ -872,7 +936,6 @@
                 width: 350px;
                 margin: 20px auto;
                 text-align: center;
-                /* width: 80%; */
                 margin: 40px auto;
                 line-height: 1.5rem;
                 text-align: center;
@@ -881,6 +944,134 @@
             #container .franchise .franchise_info button {
                 display: block;
                 margin: 10px auto;
+            }
+
+            /* 컬쳐랩 섹션 */
+            #container .culture_lab {
+                height: 110vw;
+                width: 100%;
+            }
+
+            #container .culture_lab ul {
+                width: 100%;
+            }
+
+            #container .culture_lab>p:nth-child(1) {
+                padding-top: 70px;
+                width: 230px;
+                margin: 0 auto;
+                font-size: 2rem;
+            }
+
+            #container .culture_lab>p:nth-child(2) {
+                font-size: 1.2rem;
+            }
+
+            #container .culture_lab .culture_lab_line {
+                margin-top: 50px;
+            }
+
+            #container .culture_lab img {
+                width: 40%;
+            }
+
+            #container .culture_lab_icon a p {
+                font-size: 0.8rem;
+                line-height: 1rem;
+                margin: 10px auto;
+            }
+
+            /* 커피랩 섹션 */
+            #container .coffee_lab {
+                height: 110vw;
+            }
+
+            #container .coffee_lab p:nth-child(1) {
+                padding-top: 70px;
+                width: 200px;
+                margin: 0 auto;
+                font-size: 2rem;
+            }
+
+            #container .coffee_lab p:nth-child(2) {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+            }
+
+            #container .coffee_lab .coffee_lab_img {
+                width: 100%;
+                height: 70vw;
+                margin: 40px 0;
+            }
+
+            /* 인포 섹션 */
+            #container .info {
+                width: 100%;
+                height: 110vw;
+            }
+
+            #container .info .title {
+                margin: 0;
+                padding-top: 50px;
+            }
+
+            #container .info>div {
+                float: none;
+                height: 155px;
+            }
+
+            #container .info .title {
+                font-size: 1.2rem;
+                padding-top: 30px;
+            }
+
+            #container .info .line {
+                display: block;
+                margin: 20px 0;
+            }
+
+            #container .info .franchise_open {
+                width: 100%;
+                background-position: center left;
+                background-size: cover;
+                padding-left: 50px;
+            }
+
+            #container .info .store_search {
+                background-color: #233E83;
+                background-position: top right;
+                background-repeat: no-repeat;
+                width: 100%;
+                padding-left: 50px;
+            }
+
+            #container .info .main_news .notice_wrap dl dd,
+            #container .info .store_search>p:nth-child(3) {
+                display: none;
+            }
+
+            #container .info .main_news .notice_title {
+                padding-left: 40px;
+                font-size: 1.2rem;
+            }
+
+            #container .info .main_news .notice_wrap dt a {
+                padding-left: 40px;
+            }
+
+            #container .info .main_news {
+                width: 100%;
+                padding-top: 40px;
+            }
+
+            #container .info .store_search input {
+                margin: 0px;
+                width: 40%;
+            }
+
+            /* SNS SECTION */
+            #container .sns .sns_img {
+                width: 100%;
             }
         }
 
@@ -899,7 +1090,9 @@
 
             #header .topmenu {
                 border-bottom: 1px solid #eaeaea;
-                padding: 10px
+                padding: 10px;
+                width: 100%;
+                margin: 0 auto;
             }
 
             #header .topmenu .top_right {
@@ -1014,6 +1207,131 @@
 
             #container .franchise .franchise_info button {
                 margin-top: 20px;
+            }
+
+            /* 커피랩 섹션 */
+            #container .culture_lab {
+                height: 70vw;
+            }
+
+            #container .culture_lab ul {
+                width: 100%;
+            }
+
+            #container .culture_lab>p:nth-child(1) {
+                padding-top: 70px;
+                width: 230px;
+                margin: 0 auto;
+                font-size: 2rem;
+            }
+
+            #container .culture_lab>p:nth-child(2) {
+                font-size: 1.2rem;
+            }
+
+            #container .culture_lab .culture_lab_line {
+                margin-top: 50px;
+            }
+
+            #container .culture_lab img {
+                width: 30%;
+            }
+
+            #container .culture_lab_icon a p {
+                font-size: 0.8rem;
+                line-height: 1rem;
+                margin: 10px auto;
+            }
+
+            /* 커피랩 섹션 */
+            #container .coffee_lab {
+                height: 110vw;
+            }
+
+            #container .coffee_lab p:nth-child(1) {
+                padding-top: 70px;
+                width: 200px;
+                margin: 0 auto;
+                font-size: 2rem;
+            }
+
+            #container .coffee_lab p:nth-child(2) {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+            }
+
+            #container .coffee_lab .coffee_lab_img {
+                width: 100%;
+                height: 70vw;
+                margin: 40px 0;
+            }
+
+            /* 인포 섹션 */
+            #container .info {
+                width: 100%;
+            }
+
+            #container .info .title {
+                margin: 0;
+                padding-top: 50px;
+            }
+
+            #container .info>div {
+                float: none;
+                height: 155px;
+            }
+
+            #container .info .title {
+                font-size: 1.2rem;
+                padding-top: 30px;
+            }
+
+            #container .info .line {
+                display: block;
+                margin: 20px 0;
+            }
+
+            #container .info .franchise_open {
+                width: 100%;
+                background-position: center left;
+                background-size: cover;
+                padding-left: 50px;
+            }
+
+            #container .info .store_search {
+                background-color: #233E83;
+                background-position: top right;
+                background-repeat: no-repeat;
+                width: 100%;
+                padding-left: 50px;
+            }
+
+            #container .info .store_search>p:nth-child(3) {
+                display: none;
+            }
+
+            #container .info .main_news .notice_title {
+                padding-left: 40px;
+                font-size: 1.2rem;
+            }
+
+            #container .info .main_news .notice_wrap dt a {
+                padding-left: 40px;
+            }
+
+            #container .info .main_news {
+                width: 100%;
+                padding: 20px;
+            }
+
+            #container .info .store_search input {
+                margin: 0px;
+                width: 40%;
+            }
+
+            /* SNS SECTION */
+            #container .sns .sns_img {
+                width: 100%;
             }
         }
     </style>
@@ -1182,10 +1500,12 @@
                 <div class="line"></div>
                 <div class="coffee_lab_img">
                     <div class="back_img1">
+                        <img src="img/block05_img02.jpg" alt="">
                         <p>COFFEE LAB</p>
                         <div class="coffee_lab_line"></div>
                     </div>
                     <div class="back_img2">
+                        <img src="img/block05_img01.jpg" alt="">
                         <p>LAB MENU</p>
                         <div class="coffee_lab_line"></div>
                     </div>
