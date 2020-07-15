@@ -26,15 +26,12 @@ a {
 
 /* HEADER */
 #header {
-    /* margin: 0 auto; */
-    /* height: 130px; */
     position: relative;
-    height:110px;
+    height: 125px;
 }
 
 #header .topmenu {
     width: 1180px;
-    /* width:70%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,18 +92,20 @@ a {
     justify-content: center;
     z-index: 999;
     padding-left: 15px;
-    height:40px;
-    background-color:#fff;
-    position:absolute;
-    left:0;
-    right:0;
+    height: 60px;
+    padding: 20px 0;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
     transition: height .2s ease-in-out;
     overflow: hidden;
+    border-bottom: 1px solid gray;
 }
 
 #header .nav:hover {
-    height:300px;
-    margin:0;
+    height: 300px;
+    margin: 0;
 }
 
 #header .nav.fix {
@@ -126,14 +125,43 @@ a {
     width: 900px;
     display: flex;
     justify-content: space-around;
-    background-color:#fff;
+    background-color: #fff;
 }
 
-#header .nav .gnb .menu_title li{
+#header .nav.mobile{
+    flex-direction: column;
+    overflow: visible;
 }
 
-#header .nav .gnb .menu_title ul{
-    margin-top:30px;
+#header .nav .gnb.mobile {
+    background-color:#1D326C;
+    position: fixed;
+    right:0;
+    top:0;
+    flex-direction: column;  
+    width:85%;
+}
+
+#header .nav .gnb.mobile>li{
+    border-bottom:1px solid red;
+    padding:20px;
+    color:#fff;
+}
+
+#header .nav .gnb.mobile>li a{
+    color:#fff;
+}
+
+#header .nav .gnb.mobile>li>ul{
+    border:1px solid #fff;
+    display:none;
+    color:#fff;
+}
+
+#header .nav .gnb .menu_title li {}
+
+#header .nav .gnb .menu_title ul {
+    margin-top: 30px;
 }
 
 #header .nav .gnb .menu_title a {
@@ -183,15 +211,13 @@ a {
 }
 
 #footer .footer_info {
-    width: 50%;
+    width: 800px;
     margin: 0 auto;
     color: #818181;
     font-size: 0.7em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    border: 1px solid lime;
     line-height: 1.2rem;
 }
 

@@ -71,33 +71,45 @@
             background-image: url('img/dream_factory_bg.gif');
             height: 450px;
             display: flex;
-            padding-top: 40px;
+            padding-top: 80px;
             justify-content: space-around;
             position: relative;
             overflow: hidden;
+            box-sizing: border-box;
         }
 
         #container .dream_factory .dream_factory_text {
-            margin-top: 30px;
+            margin: 0 auto;
         }
 
         #container .dream_factory .dream_factory_text p:nth-child(2) {
             font-size: 30px;
+            margin-top: 20px;
         }
 
         #container .dream_factory .dream_factory_text p:nth-child(3) {
             margin-top: 30px;
+            width: 35%;
+            line-height: 1.3rem;
+            ;
         }
 
         #container .dream_factory img {
-            width: 70%;
+            width: 1063px;
             position: absolute;
-            right: -170px;
+            right: -160px;
             bottom: 0px;
         }
 
         #container em {
-            font-size: 40px;
+            font-size: 30px;
+            font-weight: 900;
+            font-family: 'Nunito Sans', sans-serif;
+            background-image: url('img/dream_factory_txt.png');
+            width: 1036px;
+            height: 87px;
+            display: block;
+            text-indent: -9999px;
         }
 
         #container .dream_factory p,
@@ -801,24 +813,42 @@
             }
 
             /* header */
-            #header .nav {
-                font-size: 0;
+            #header {
+                height: 93px;
             }
 
             #header .topmenu {
                 border-bottom: 1px solid #eaeaea;
                 padding: 10px;
                 width: 100%;
+                margin: 0 auto;
             }
 
             #header .topmenu .top_right {
                 display: none;
             }
 
+            #header .nav {
+                font-size: 0;
+                padding-left: 30px;
+                justify-content: left;
+                pointer-events: none;
+            }
+
+            #header .nav .gnb {
+                display: none;
+            }
+
             /* 드림 팩토리 */
             #container .dream_factory {
                 flex: none;
-                height: 100vw;
+                height: 110vw;
+            }
+
+            #container em {
+                text-indent: 0;
+                background-image: unset;
+                height: auto;
             }
 
             #container .dream_factory button {
@@ -833,13 +863,19 @@
 
             #container .dream_factory .dream_factory_text {
                 text-align: center;
+                margin: 0 auto;
+            }
+
+            #container .dream_factory .dream_factory_text p:nth-child(2) {
+                margin: 10px;
+                font-weight: 200;
             }
 
             #container .dream_factory .dream_factory_text p:nth-child(3) {
-                width: 80%;
-                margin: 40px auto;
+                margin: 20px auto;
                 line-height: 1.5rem;
                 text-align: center;
+                width: 35%;
             }
 
             /* 메뉴 배너 */
@@ -855,7 +891,6 @@
             #container .menu_banner .bold {
                 display: block;
                 font-size: 2rem;
-                /* letter-spacing: 1px; */
             }
 
             #container .menu_banner P:nth-child(3) {
@@ -1087,8 +1122,8 @@
             }
 
             /* header */
-            #header .nav {
-                font-size: 0;
+            #header {
+                height: 93px;
             }
 
             #header .topmenu {
@@ -1099,10 +1134,27 @@
             }
 
             #header .topmenu .top_right {
-                display: none;
+                /* display: none; */
+            }
+
+            #header .nav {
+                /* font-size: 0; */
+                padding-left: 30px;
+                justify-content: left;
+                pointer-events: none;
+            }
+
+            #header .nav .gnb.mobile>li {
+                /* display: none; */
             }
 
             /* dream Factory */
+            #container em {
+                text-indent: 0;
+                background-image: unset;
+                height: auto;
+            }
+
             #container .dream_factory {
                 flex: none;
                 height: 80vw;
@@ -1120,18 +1172,34 @@
 
             #container .dream_factory .dream_factory_text {
                 text-align: center;
+                margin: 0 auto;
+            }
+
+            #container .dream_factory .dream_factory_text p:nth-child(2) {
+                margin: 10px;
+                font-weight: 200;
             }
 
             #container .dream_factory .dream_factory_text p:nth-child(3) {
-                width: 80%;
-                margin: 40px auto;
+                margin: 20px auto;
                 line-height: 1.5rem;
                 text-align: center;
+                width: 35%;
             }
 
             /* 메뉴 섹션 */
             #container .menu_banner {
                 height: 80vw;
+            }
+
+            #container .menu_banner P:nth-child(1) {
+                font-size: 2rem;
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            #container .menu_banner P:nth-child(3) {
+                font-size: 1.1rem;
             }
 
             #container .menu_banner .ani_object01 {
@@ -1323,7 +1391,11 @@
 
             #container .info .main_news {
                 width: 100%;
-                padding: 20px;
+                padding-top: 40px;
+            }
+
+            #container .info .main_news .brochure {
+                padding-left: 40px;
             }
 
             #container .info .store_search input {
@@ -1371,14 +1443,14 @@
                     </li>
                 </div>
             </ul>
-            <div class="nav">
+            <div class="nav mobile">
                 <h1 class="screen_out">메인 로고</h1>
                 <div class="logo"><a href="index.html">
                         <img src="img/top_logo.gif" alt="logo"></a>
                 </div>
 
                 <!-- GNB MENU -->
-                <ul class="gnb">
+                <ul class="gnb mobile">
                     <h2 class="screen_out">이디야 메인 메뉴</h2>
                     <li class="menu_title"><a href="#"><span>메뉴</span></a>
                         <ul>
@@ -1429,7 +1501,8 @@
                 <div class="slide_banner">
                     <div><img src="img/main_banner_1.jpg" alt="mainanner"></div>
                     <div><img src="img/main_banner_2.jpg" alt="mainanner"></div>
-                    <div><img src="img/main_banner_3.png" alt="mainanner"></div>
+                    <div><img src="img/main_banner_3.jpg" alt="mainanner"></div>
+                    <div><img src="img/main_banner_4.jpg" alt="mainanner"></div>
                 </div>
             </div>
 
@@ -1437,7 +1510,7 @@
             <div class="dream_factory">
                 <div class="dream_factory_text">
                     <em>DREAM FACTORY</em>
-                    <p>EDIYA COFFEE</p>
+                    <p class="bold">EDIYA COFFEE</p>
                     <P>최첨단 시설에서 탄생하는 고품질의 원두를 철저한 물류관리시스템으로 안정적으로 제공합니다. </P>
                     <button type="button"><a href="#">드림 팩토리</a></button>
                     <button type="button"><a href="#">드림 물류센터</a></button>
@@ -1623,6 +1696,38 @@
 
         $('.slide_banner').bxSlider(opt);
     });
+
+
+    // header mobile click event
+
+
+
+    const gnbTitle = document.querySelectorAll('#header .nav .gnb.mobile>li>ul');
+    const gnb = document.querySelector('#header .nav .gnb.mobile');
+    // console.log(gnbTitle)
+    // console.log(gnb)
+
+    gnb.addEventListener('click', mobileGnb);
+
+    function mobileGnb(event) {
+        console.log(event.target.children[1]);
+        // for (let i = 0; i < gnbTitle.length; i++) {
+        //     if (gnbTitle[i].style.display === 'none') {
+        //         gnbTitle[i].style.display = 'block';
+        //     } else {
+        //         gnbTitle[i].style.display = 'none';
+        //     }
+        // }
+
+        if (event.target.children[1].style.display === '') {
+            event.target.children[1].style.display = 'block';
+        } else {
+            event.target.children[1].style.display = '';
+        }
+
+
+
+    }
 </script>
 
 </html>
