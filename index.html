@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mainmedia.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
@@ -836,7 +838,7 @@
             }
 
             #header .nav .gnb {
-                display: none;
+                /* display: none; */
             }
 
             /* 드림 팩토리 */
@@ -1122,31 +1124,31 @@
             }
 
             /* header */
-            #header {
-                height: 93px;
-            }
+            /* #header {
+    height: 93px;
+}
 
-            #header .topmenu {
-                border-bottom: 1px solid #eaeaea;
-                padding: 10px;
-                width: 100%;
-                margin: 0 auto;
-            }
+#header .topmenu {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
 
-            #header .topmenu .top_right {
-                /* display: none; */
-            }
+#header .topmenu .top_right {
+    display: none;
+}
 
-            #header .nav {
-                /* font-size: 0; */
-                padding-left: 30px;
-                justify-content: left;
-                pointer-events: none;
-            }
+#header .nav {
+    font-size: 0;
+    padding-left: 30px;
+    justify-content: left;
+    pointer-events: none;
+}
 
-            #header .nav .gnb.mobile>li {
-                /* display: none; */
-            }
+#header .nav .gnb.mobile>li {
+    display: none;
+} */
 
             /* dream Factory */
             #container em {
@@ -1414,6 +1416,49 @@
                 width: 100%;
             }
         }
+
+        /* 1180이하 header */
+        @media screen and (max-width:1180px) {
+            #header {
+                /* background-color:tomato; */
+            }
+
+            /* header */
+            #header {
+                height: 93px;
+            }
+
+            #header .topmenu {
+                border-bottom: 1px solid #eaeaea;
+                padding: 10px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            #header .topmenu .top_right {
+                display: none;
+            }
+
+            #header .nav {
+                padding: 20px;
+                justify-content: space-between;
+                pointer-events: none;
+            }
+
+            #header .nav .gnb {
+                background-image: url('img/m_nav_btn.gif');
+                font-size: 0;
+                width: 26px;
+                height: 22px;
+                /* position:absolute; */
+                right: 20px;
+                z-index: 99999;
+            }
+
+            #header .nav .gnb.toggle>li>ul{
+                /* display:block; */
+            }
+        }
     </style>
 </head>
 
@@ -1443,14 +1488,14 @@
                     </li>
                 </div>
             </ul>
-            <div class="nav mobile">
+            <div class="nav toggle">
                 <h1 class="screen_out">메인 로고</h1>
                 <div class="logo"><a href="index.html">
                         <img src="img/top_logo.gif" alt="logo"></a>
                 </div>
 
                 <!-- GNB MENU -->
-                <ul class="gnb mobile">
+                <ul class="gnb toggle">
                     <h2 class="screen_out">이디야 메인 메뉴</h2>
                     <li class="menu_title"><a href="#"><span>메뉴</span></a>
                         <ul>
@@ -1674,19 +1719,29 @@
 </body>
 <script>
     // 스크롤 이벤트 관련
-    window.addEventListener('scroll', scrollWork);
+    window.addEventListener('scroll', scrollWork, {
+        passive: true   // 스크롤 성능 향상을 위한 옵션으로 true일 경우, 스크롤을 위해 블록되는 것을 방지한다. 사용하지 않을 경우 크롬에서 경고 발생
+    });
 
     const nav = document.querySelector('#header .nav');
     const html = document.querySelector('html');
+    let start;
 
-    function scrollWork() {
-
+    function realScrollWork() {
+        console.log(html.scrollTop);
         if (html.scrollTop > 130) {
             nav.classList.add('fix');
         } else {
             nav.classList.remove('fix');
         }
     }
+
+    function scrollWork() {
+        clearTimeout(start);
+        start = setTimeout(realScrollWork, 150)
+    }
+
+    // 메인 슬라이더 관련
 
     $(document).ready(function () {
 
@@ -1698,19 +1753,17 @@
     });
 
 
-    // header mobile click event
+    // header Toggle click event
 
+    const gnbTitle = document.querySelectorAll('#header .nav .gnb.toggle>li>ul');
+    const gnb = document.querySelector('#header .nav .gnb.toggle');
+    console.log(gnbTitle)
+    console.log(gnb)
 
+    gnb.addEventListener('click', toggleGnb);
 
-    const gnbTitle = document.querySelectorAll('#header .nav .gnb.mobile>li>ul');
-    const gnb = document.querySelector('#header .nav .gnb.mobile');
-    // console.log(gnbTitle)
-    // console.log(gnb)
-
-    gnb.addEventListener('click', mobileGnb);
-
-    function mobileGnb(event) {
-        console.log(event.target.children[1]);
+    function toggleGnb(event) {
+        console.log(event.target);
         // for (let i = 0; i < gnbTitle.length; i++) {
         //     if (gnbTitle[i].style.display === 'none') {
         //         gnbTitle[i].style.display = 'block';

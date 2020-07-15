@@ -128,35 +128,43 @@ a {
     background-color: #fff;
 }
 
-#header .nav.mobile{
-    flex-direction: column;
+/* =========== toggle ============ */
+
+#header .nav.toggle{
+    /* flex-direction: column; */
     overflow: visible;
 }
 
-#header .nav .gnb.mobile {
-    background-color:#1D326C;
+#header .nav .gnb.toggle {  
     position: fixed;
     right:0;
-    top:0;
+    top:200px;
     flex-direction: column;  
     width:85%;
+    background-color:#1D326C;
+    font-size: 0.9rem;
 }
 
-#header .nav .gnb.mobile>li{
-    border-bottom:1px solid red;
+#header .nav .gnb.toggle>li{
+    border-bottom:1px solid #fff;
     padding:20px;
     color:#fff;
+    background-color:#1D326C;
 }
 
-#header .nav .gnb.mobile>li a{
+#header .nav .gnb.toggle>li a{
     color:#fff;
+    /* background-color:#1D326C; */
 }
 
-#header .nav .gnb.mobile>li>ul{
+#header .nav .gnb.toggle>li>ul{
     border:1px solid #fff;
     display:none;
     color:#fff;
+    background-color:blue;
 }
+
+/* =========== toggle ============ */
 
 #header .nav .gnb .menu_title li {}
 
