@@ -815,7 +815,7 @@
             }
 
             /* header */
-            #header {
+            /* #header {
                 height: 93px;
             }
 
@@ -838,8 +838,8 @@
             }
 
             #header .nav .gnb {
-                /* display: none; */
-            }
+                display: none;
+            } */
 
             /* 드림 팩토리 */
             #container .dream_factory {
@@ -1041,7 +1041,7 @@
             /* 인포 섹션 */
             #container .info {
                 width: 100%;
-                height: 110vw;
+                height: 130vw;
             }
 
             #container .info .title {
@@ -1123,32 +1123,31 @@
                 display: none;
             }
 
-            /* header */
             /* #header {
-    height: 93px;
-}
+                height: 93px;
+            }
 
-#header .topmenu {
-    border-bottom: 1px solid #eaeaea;
-    padding: 10px;
-    width: 100%;
-    margin: 0 auto;
-}
+            #header .topmenu {
+                border-bottom: 1px solid #eaeaea;
+                padding: 10px;
+                width: 100%;
+                margin: 0 auto;
+            }
 
-#header .topmenu .top_right {
-    display: none;
-}
+            #header .topmenu .top_right {
+                display: none;
+            }
 
-#header .nav {
-    font-size: 0;
-    padding-left: 30px;
-    justify-content: left;
-    pointer-events: none;
-}
+            #header .nav {
+                font-size: 0;
+                padding-left: 30px;
+                justify-content: left;
+                pointer-events: none;
+            }
 
-#header .nav .gnb.mobile>li {
-    display: none;
-} */
+            #header .nav .gnb.mobile>li {
+                display: none;
+            } */
 
             /* dream Factory */
             #container em {
@@ -1419,13 +1418,17 @@
 
         /* 1180이하 header */
         @media screen and (max-width:1180px) {
-            #header {
-                /* background-color:tomato; */
-            }
 
             /* header */
-            #header {
-                height: 93px;
+            #header .top_wrap {
+                width: 100%;
+                padding: 5px;
+                /* background-color:yellow; */
+            }
+
+            #header .top_wrap .top_left {
+                background-color: yellow;
+                width: 100%;
             }
 
             #header .topmenu {
@@ -1436,27 +1439,75 @@
             }
 
             #header .topmenu .top_right {
-                display: none;
+                /* display: none; */
             }
 
             #header .nav {
                 padding: 20px;
                 justify-content: space-between;
-                pointer-events: none;
+                /* pointer-events: none; */
             }
 
             #header .nav .gnb {
                 background-image: url('img/m_nav_btn.gif');
                 font-size: 0;
                 width: 26px;
-                height: 22px;
-                /* position:absolute; */
+                /* height: 22px; */
+                top: 0;
                 right: 20px;
                 z-index: 99999;
             }
 
-            #header .nav .gnb.toggle>li>ul{
-                /* display:block; */
+            /* =========== toggle ============ */
+
+            #header .topmenu.toggle {
+                background-color: green;
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 50%;
+                opacity: 0.5;
+                z-index: 999;
+            }
+
+            #header .topmenu.toggle .top_right {
+                background-color: red;
+                position: fixed;
+                right: 0;
+                z-index: 9999;
+            }
+
+            #header .gnb.toggle {
+                flex-direction: column;
+                position: fixed;
+                right: 0;
+                top: 200px;
+                width: 50%;
+                /* height:100%; */
+                bottom: 0;
+                border: 10px solid lime;
+                font-size: 0.9rem;
+                opacity: 0.8;
+                background-color: tomato;
+            }
+
+            #header .nav .gnb.toggle>li {
+                border-bottom: 1px solid #fff;
+                padding: 20px;
+                color: #fff;
+                background-color: #1D326C;
+            }
+
+            #header .nav .gnb.toggle>li a {
+                color: #fff;
+            }
+
+            #header .nav .gnb.toggle>li>ul {
+                border: 1px solid #fff;
+                display: none;
+                color: #fff;
+                background-color: blue;
             }
         }
     </style>
@@ -1464,14 +1515,17 @@
 
 <body>
     <div id="wrap">
+        <!-- GNB MENU -->
+
         <header id="header">
             <!-- TOPMENU -->
-            <ul class="topmenu">
-                <div class="top_left">
-                    <li><a href="#">브랜드 사이트</a></li>
-                    <li><a href="#">기업 사이트</a></li>
-                </div>
-                <div class="top_right">
+            <ul class="top_left">
+                <li><a href="#">브랜드 사이트</a></li>
+                <li><a href="#">기업 사이트</a></li>
+            </ul>
+            <div class="top_wrap">
+                <!-- <div class="topmenu toggle"> -->
+                <ul class="top_right toggle">
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">회원가입</a></li>
                     <li><a href="map.html">매장찾기</a></li>
@@ -1486,58 +1540,59 @@
                             <option value="korean">Chinese</option>
                         </select>
                     </li>
-                </div>
-            </ul>
-            <div class="nav toggle">
-                <h1 class="screen_out">메인 로고</h1>
-                <div class="logo"><a href="index.html">
-                        <img src="img/top_logo.gif" alt="logo"></a>
-                </div>
-
-                <!-- GNB MENU -->
-                <ul class="gnb toggle">
-                    <h2 class="screen_out">이디야 메인 메뉴</h2>
-                    <li class="menu_title"><a href="#"><span>메뉴</span></a>
-                        <ul>
-                            <li><a href="#">음료</a></li>
-                            <li><a href="bakery.html">베이커리</a></li>
-                            <li><a href="#">이디야 스낵</a></li>
-                            <li><a href="#">MD</a></li>
-                            <li><a href="#">비니스트</a></li>
-                            <li><a href="bean.html">원두</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
-                        <ul>
-                            <li><a href="#">멤버스 소개</a></li>
-                            <li><a href="#">이디야카드</a></li>
-                            <li><a href="#">선물하기</a></li>
-                            <li><a href="#">이디야오더</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_title"><a href="#"><span>이디야커피랩</span></a>
-                        <ul>
-                            <li><a href="#">이디야커피랩</a></li>
-                            <li><a href="#">이디야커피랩 메뉴</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
-                        <ul>
-                            <li><a href="musicfesta.html">뮤직페스타</a></li>
-                            <li><a href="#">프로그램 및 시설 안내</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_title"><a href="#"><span>이디야 소식</span></a>
-                        <ul>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">이벤트</a></li>
-                        </ul>
-                    </li>
                 </ul>
+                <!-- </div> -->
+
+                <div class="nav">
+                    <!-- <h1 class="screen_out">메인 로고</h1> -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/top_logo.gif" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="gnb toggle">
+                        <!-- <h2 class="screen_out">이디야 메인 메뉴</h2> -->
+                        <li class="menu_title"><a href="#"><span>메뉴</span></a>
+                            <ul>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="bakery.html">베이커리</a></li>
+                                <li><a href="#">이디야 스낵</a></li>
+                                <li><a href="#">MD</a></li>
+                                <li><a href="#">비니스트</a></li>
+                                <li><a href="bean.html">원두</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title"><a href="#"><span>이디야멤버스</span></a>
+                            <ul>
+                                <li><a href="#">멤버스 소개</a></li>
+                                <li><a href="#">이디야카드</a></li>
+                                <li><a href="#">선물하기</a></li>
+                                <li><a href="#">이디야오더</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title"><a href="#"><span>이디야커피랩</span></a>
+                            <ul>
+                                <li><a href="#">이디야커피랩</a></li>
+                                <li><a href="#">이디야커피랩 메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title"><a href="#"><span>이디야컬쳐랩</span></a>
+                            <ul>
+                                <li><a href="musicfesta.html">뮤직페스타</a></li>
+                                <li><a href="#">프로그램 및 시설 안내</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title"><a href="#"><span>이디야 소식</span></a>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
-
         <content id="container">
             <!-- MAIN BANNER -->
             <div class="banner">
@@ -1674,6 +1729,7 @@
                 </div>
             </div>
 
+
             <!-- SNS BANNER -->
             <div class="sns">
                 <p>EDIYA COFFEE SNS</p>
@@ -1715,12 +1771,11 @@
             <p>ⓒ 2017 EDIYA COFFEE CONPANY. ALL RIGTHS RECERVED</p>
         </footer>
     </div>
-
 </body>
 <script>
     // 스크롤 이벤트 관련
     window.addEventListener('scroll', scrollWork, {
-        passive: true   // 스크롤 성능 향상을 위한 옵션으로 true일 경우, 스크롤을 위해 블록되는 것을 방지한다. 사용하지 않을 경우 크롬에서 경고 발생
+        passive: true // 스크롤 성능 향상을 위한 옵션으로 true일 경우, 스크롤을 위해 블록되는 것을 방지한다. 사용하지 않을 경우 크롬에서 경고 발생
     });
 
     const nav = document.querySelector('#header .nav');
@@ -1729,7 +1784,7 @@
 
     function realScrollWork() {
         console.log(html.scrollTop);
-        if (html.scrollTop > 130) {
+        if (html.scrollTop > 47) {
             nav.classList.add('fix');
         } else {
             nav.classList.remove('fix');
