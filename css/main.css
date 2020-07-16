@@ -27,18 +27,18 @@ a {
 /* HEADER */
 #header {
     position: relative;
-    background-color:yellow;
     margin-top:20px;
+    height:50px;
 }
 
 #header .top_left {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     display: flex;
-    /* padding: 10px 0; */
     width:50%;
     font-size: 0.75em;
-    background-color: green;
     font-weight: 900;
+    height:30px;
+    align-items: center;
 }
 
 #header .top_left li:nth-child(1) {
@@ -50,42 +50,58 @@ a {
     padding-left: 16px;
 }
 
-#header .top_wrap{
-    /* position:relative; */
-}
-
 #header .top_wrap .top_right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    background-color:tomato;
+    height:30px;
     width:50%;
     position: absolute;
     right:0;
     top:0;
 }
 
-#header .top_wrap .top_right li {
-    margin-right: 15px;
-    font-size: 0.8rem;
+#header .top_wrap .top_right>ul:nth-child(1){
+    display:flex;
+    justify-content:flex-end;
+    border:1px solid lime;
+    width:50%;
+    height:30px;
+    align-items: center;
 }
 
-#header .top_wrap .top_right li:nth-child(1),
-#header .top_wrap .top_right li:nth-child(2) {
+#header .top_wrap .top_right>ul:nth-child(1) li {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+    font-size: 0.8rem;
     padding-right: 16px;
-    vertical-align: middle;
+
+}
+
+#header .top_wrap .top_right>ul:nth-child(1) li:last-child{
+    border:0;
+    padding-right: 0;
+}
+
+#header .top_wrap .top_right>ul:nth-child(2){
+    display:flex;
+    border:1px solid lime;
+    width:50%;
+}
+
+#header .top_wrap .top_right>ul:nth-child(2) li{
+    margin-right:5px;
+}
+
+#header .top_wrap .top_right>ul:nth-child(2) li:nth-child(4){
+    margin-right:15px;
 }
 
 #header .top_wrap .top_right li a {
     color: #848484;
 }
 
-#header .topmenu li img {
-    margin-right: -10px;
-}
-
-#header .topmenu li select {
+#header .top_wrap li select {
     width: 150px;
     height: 25px;
     padding: 0 10px;
@@ -132,7 +148,7 @@ a {
     justify-content: space-around;
     background-color: #fff;
     z-index: 9999;
-    background-color:tomato;
+    /* background-color:tomato; */
 }
 
 #header .nav .gnb .menu_title li {}

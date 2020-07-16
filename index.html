@@ -1419,11 +1419,19 @@
         /* 1180이하 header */
         @media screen and (max-width:1180px) {
 
+            #header {
+                margin: 0;
+                height:80px;
+            }
+
+            #header .top_left {
+                justify-content: center;
+                border-bottom: 1px solid #eaeaea;
+            }
+
             /* header */
             #header .top_wrap {
                 width: 100%;
-                padding: 5px;
-                /* background-color:yellow; */
             }
 
             #header .top_wrap .top_left {
@@ -1431,21 +1439,9 @@
                 width: 100%;
             }
 
-            #header .topmenu {
-                border-bottom: 1px solid #eaeaea;
-                padding: 10px;
-                width: 100%;
-                margin: 0 auto;
-            }
-
-            #header .topmenu .top_right {
-                /* display: none; */
-            }
-
             #header .nav {
                 padding: 20px;
                 justify-content: space-between;
-                /* pointer-events: none; */
             }
 
             #header .nav .gnb {
@@ -1460,36 +1456,67 @@
 
             /* =========== toggle ============ */
 
-            #header .topmenu.toggle {
-                background-color: green;
+            /* #header .top_wrap.toggle {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 80%;
+                height: 100%;
+                background-color: tomato;
+            } */
+
+            #header .top_wrap .top_right {
+                visibility: hidden;
+            }
+
+            #header .top_wrap .top_right.toggle {
+                visibility: visible;
+                justify-content: space-between;
+                background-color: #1D326C;
                 position: fixed;
                 right: 0;
                 top: 0;
-                height: 100%;
-                width: 50%;
-                opacity: 0.5;
-                z-index: 999;
+                height: 50px;
+                width: 70%;
+                padding: 0 20px;
+                z-index: 9999;
             }
 
-            #header .topmenu.toggle .top_right {
-                background-color: red;
-                position: fixed;
-                right: 0;
-                z-index: 9999;
+            #header .top_wrap .top_right.toggle>ul:nth-child(1) {
+                justify-content: left;
+                width: 70%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #header .top_wrap .top_right li a {
+                color: #fff;
+            }
+
+            #header .top_wrap .top_right.toggle>ul:nth-child(2) {
+                justify-content: flex-end;
+                width: 30%;
+                margin-right: 0;
+                padding: 0;
+            }
+
+            #header .top_wrap .top_right>ul:nth-child(2) li:nth-child(4) {
+                margin: 0;
+            }
+
+            #header .top_wrap li select {
+                display: none;
             }
 
             #header .gnb.toggle {
                 flex-direction: column;
                 position: fixed;
                 right: 0;
-                top: 200px;
-                width: 50%;
-                /* height:100%; */
-                bottom: 0;
-                border: 10px solid lime;
+                top: 50px;
+                width: 70%;
                 font-size: 0.9rem;
-                opacity: 0.8;
-                background-color: tomato;
+                opacity: 1;
+                border: 1px solid lime;
             }
 
             #header .nav .gnb.toggle>li {
@@ -1497,6 +1524,11 @@
                 padding: 20px;
                 color: #fff;
                 background-color: #1D326C;
+
+            }
+
+            #header .nav .gnb .menu_title li {
+                border-bottom: palegoldenrod;
             }
 
             #header .nav .gnb.toggle>li a {
@@ -1507,7 +1539,7 @@
                 border: 1px solid #fff;
                 display: none;
                 color: #fff;
-                background-color: blue;
+                background-color: rgb(42, 65, 129);
             }
         }
     </style>
@@ -1515,42 +1547,44 @@
 
 <body>
     <div id="wrap">
-        <!-- GNB MENU -->
-
         <header id="header">
             <!-- TOPMENU -->
             <ul class="top_left">
                 <li><a href="#">브랜드 사이트</a></li>
                 <li><a href="#">기업 사이트</a></li>
             </ul>
-            <div class="top_wrap">
+            <div class="top_wrap selTo">
                 <!-- <div class="topmenu toggle"> -->
-                <ul class="top_right toggle">
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="map.html">매장찾기</a></li>
-                    <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
-                    <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
-                    <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
-                    <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
-                    <li>
-                        <select name="language" id="">
-                            <option value="korean">Korean</option>
-                            <option value="korean">English</option>
-                            <option value="korean">Chinese</option>
-                        </select>
-                    </li>
-                </ul>
+                <div class="top_right selTo ">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="map.html">매장찾기</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/top_sns01.gif" alt="blog"></a></li>
+                        <li><a href="#"><img src="img/top_sns02.gif" alt="instagram"></a></li>
+                        <li><a href="#"><img src="img/top_sns03.gif" alt="facebook"></a></li>
+                        <li><a href="#"><img src="img/top_sns04.gif" alt="youtube"></a></li>
+                        <li>
+                            <select name="language" id="">
+                                <option value="korean">Korean</option>
+                                <option value="korean">English</option>
+                                <option value="korean">Chinese</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
                 <!-- </div> -->
-
-                <div class="nav">
+                <div class="nav selTo ">
                     <!-- <h1 class="screen_out">메인 로고</h1> -->
                     <div class="logo">
                         <a href="index.html">
                             <img src="img/top_logo.gif" alt="logo">
                         </a>
                     </div>
-                    <ul class="gnb toggle">
+                    <!-- GNB MENU -->
+                    <ul class="gnb selTo ">
                         <!-- <h2 class="screen_out">이디야 메인 메뉴</h2> -->
                         <li class="menu_title"><a href="#"><span>메뉴</span></a>
                             <ul>
@@ -1810,31 +1844,50 @@
 
     // header Toggle click event
 
-    const gnbTitle = document.querySelectorAll('#header .nav .gnb.toggle>li>ul');
-    const gnb = document.querySelector('#header .nav .gnb.toggle');
-    console.log(gnbTitle)
-    console.log(gnb)
+    const gnbTitles = document.querySelectorAll('.menu_title');
 
-    gnb.addEventListener('click', toggleGnb);
+    for (let i = 0; i < gnbTitles.length; i++) {
+        gnbTitles[i].addEventListener('click', toggleGnb);
+    }
 
     function toggleGnb(event) {
-        console.log(event.target);
-        // for (let i = 0; i < gnbTitle.length; i++) {
-        //     if (gnbTitle[i].style.display === 'none') {
-        //         gnbTitle[i].style.display = 'block';
-        //     } else {
-        //         gnbTitle[i].style.display = 'none';
-        //     }
-        // }
+        const gnbLis = event.currentTarget.getElementsByTagName('ul');
 
-        if (event.target.children[1].style.display === '') {
-            event.target.children[1].style.display = 'block';
-        } else {
-            event.target.children[1].style.display = '';
+
+        // console.log(event.target);  // 클릭한 대상 모두를 타겟으로
+        // console.log(this);  // 이벤트리스너를 건 애들만
+        // console.log(event.currentTarget);  // 이벤트리스너를 건 애들만
+        // console.log(event.currentTarget.childNodes[2])
+        for (let i = 0; i < gnbTitles.length; i++) {
+            const ul = gnbLis[0];
+
+            if (gnbLis.length < 1) {
+                continue;
+            }
+
+            if (ul.style.display === '') {
+                ul.style.display = 'block';
+            } else {
+                ul.style.display = '';
+            }
+            // if (event.currentTarget.childNodes[2].style.display === '') {
+            //     event.currentTarget.childNodes[2].style.display = 'block';
+            // } else {
+            //     event.currentTarget.childNodes[2].style.display = '';
+            // }
         }
+    }
 
+    const gnbBtn = document.querySelector('#header .nav .gnb');
 
+    gnbBtn.addEventListener('click', gnbBtnClick);
 
+    function gnbBtnClick() {
+        const toggleElems = document.querySelectorAll('#header .selTo');
+
+        for (let i = 0; i < toggleElems.length; i++) {
+            toggleElems[i].classList.add('toggle');
+        }
     }
 </script>
 
