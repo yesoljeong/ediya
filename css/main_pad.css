@@ -1,0 +1,300 @@
+/* 공통 */
+#header {
+    background-color:red;
+}
+
+#container .line {
+    display: none;
+}
+
+/* #header {
+    height: 93px;
+}
+
+#header .topmenu {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header .topmenu .top_right {
+    display: none;
+}
+
+#header .nav {
+    font-size: 0;
+    padding-left: 30px;
+    justify-content: left;
+    pointer-events: none;
+}
+
+#header .nav .gnb.mobile>li {
+    display: none;
+} */
+
+/* dream Factory */
+#container em {
+    text-indent: 0;
+    background-image: unset;
+    height: auto;
+}
+
+#container .dream_factory {
+    flex: none;
+    height: 80vw;
+    margin: 0 auto;
+}
+
+#container .dream_factory button {
+    margin: 10px 3px;
+}
+
+#container .dream_factory img {
+    width: 100%;
+    left: 0;
+}
+
+#container .dream_factory .dream_factory_text {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#container .dream_factory .dream_factory_text p:nth-child(2) {
+    margin: 10px;
+    font-weight: 200;
+}
+
+#container .dream_factory .dream_factory_text p:nth-child(3) {
+    margin: 20px auto;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 35%;
+}
+
+/* 메뉴 섹션 */
+#container .menu_banner {
+    height: 80vw;
+}
+
+#container .menu_banner P:nth-child(1) {
+    font-size: 2rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#container .menu_banner P:nth-child(3) {
+    font-size: 1.1rem;
+}
+
+#container .menu_banner .ani_object01 {
+    top: 50px;
+    left: -200px;
+    border: 10px solid lime;
+}
+
+#container .menu_banner .ani_object02 {
+    top: 120px;
+    border: 10px solid blue;
+}
+
+#container .menu_banner .ani_object01 img:nth-child(1) {
+    width: 15%;
+    margin: 130px 0 0 120px;
+}
+
+#container .menu_banner .ani_object01 img:nth-child(2) {
+    width: 10%;
+    margin: 70px 0 0 100px;
+}
+
+#container .menu_banner .ani_object01 img:nth-child(3) {
+    width: 50%;
+}
+
+#container .menu_banner .ani_object02 img:nth-child(1) {
+    width: 120%;
+    left: 0px;
+}
+
+#container .menu_banner .ani_object02 img:nth-child(2) {
+    width: 12%;
+    left: 120px;
+    margin-top: 80px;
+}
+
+#container .menu_banner .ani_object02 img:nth-child(3) {
+    width: 9%;
+    left: 200px;
+}
+
+#container .menu_banner .ani_object02 img:nth-child(4) {
+    width: 9%;
+    left: 230px;
+}
+
+/* 프랜차이즈 섹션 */
+#container .franchise {
+    background-image: url('../img/company_bg_m.jpg');
+    background-position: center;
+    width: 100%;
+}
+
+#container .franchise .franchise_info {
+    position: static;
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 80%;
+}
+
+#container .franchise .franchise_info p:nth-child(1) {
+    font-size: 1.6rem;
+    line-height: 35px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+#container .franchise .franchise_info p:nth-child(2) {
+    width: 350px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#container .franchise .franchise_info button {
+    margin-top: 20px;
+}
+
+/* 커피랩 섹션 */
+#container .culture_lab {
+    height: 70vw;
+}
+
+#container .culture_lab ul {
+    width: 100%;
+}
+
+#container .culture_lab>p:nth-child(1) {
+    padding-top: 70px;
+    width: 230px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+#container .culture_lab>p:nth-child(2) {
+    font-size: 1.2rem;
+}
+
+#container .culture_lab .culture_lab_line {
+    margin-top: 50px;
+}
+
+#container .culture_lab img {
+    width: 30%;
+}
+
+#container .culture_lab_icon a p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 10px auto;
+}
+
+/* 커피랩 섹션 */
+#container .coffee_lab {
+    height: 110vw;
+}
+
+#container .coffee_lab p:nth-child(1) {
+    padding-top: 70px;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+#container .coffee_lab p:nth-child(2) {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+#container .coffee_lab .coffee_lab_img {
+    width: 100%;
+    height: 70vw;
+    margin: 40px 0;
+}
+
+/* 인포 섹션 */
+#container .info {
+    width: 100%;
+}
+
+#container .info .title {
+    margin: 0;
+    padding-top: 50px;
+}
+
+#container .info>div {
+    float: none;
+    height: 155px;
+}
+
+#container .info .title {
+    font-size: 1.2rem;
+    padding-top: 30px;
+}
+
+#container .info .line {
+    display: block;
+    margin: 20px 0;
+}
+
+#container .info .franchise_open {
+    width: 100%;
+    background-position: center left;
+    background-size: cover;
+    padding-left: 50px;
+}
+
+#container .info .store_search {
+    background-color: #233E83;
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-left: 50px;
+}
+
+#container .info .store_search>p:nth-child(3) {
+    display: none;
+}
+
+#container .info .main_news .notice_title {
+    padding-left: 40px;
+    font-size: 1.2rem;
+}
+
+#container .info .main_news .notice_wrap dt a {
+    padding-left: 40px;
+}
+
+#container .info .main_news {
+    width: 100%;
+    padding-top: 40px;
+}
+
+#container .info .main_news .brochure {
+    padding-left: 40px;
+}
+
+#container .info .store_search input {
+    margin: 0px;
+    width: 40%;
+}
+
+/* SNS SECTION */
+#container .sns .sns_img {
+    width: 100%;
+}
+
+/* footer */
+#footer,
+#footer .footer_info {
+    width: 100%;
+}

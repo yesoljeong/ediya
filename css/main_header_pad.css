@@ -1,0 +1,121 @@
+#header {
+    margin: 0;
+    height: 80px;
+    background-color:green;
+}
+
+#header .top_left {
+    justify-content: center;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#header .top_wrap {
+    width: 100%;
+}
+
+#header .top_wrap .top_left {
+    background-color: yellow;
+    width: 100%;
+}
+
+#header .nav {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+#header .nav .gnb {
+    background-image: url('../img/m_nav_btn.gif');
+    font-size: 0;
+    width: 26px;
+    /* height: 22px; */
+    top: 0;
+    right: 20px;
+    z-index: 99999;
+}
+
+/* =========== toggle ============ */
+
+/* #header .top_wrap.toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: tomato;
+} */
+
+#header .top_wrap .top_right {
+    visibility: hidden;
+}
+
+#header .top_wrap .top_right.toggle {
+    visibility: visible;
+    justify-content: space-between;
+    background-color: #1D326C;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 70%;
+    padding: 0 20px;
+    z-index: 9999;
+}
+
+#header .top_wrap .top_right.toggle>ul:nth-child(1) {
+    justify-content: left;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+#header .top_wrap .top_right li a {
+    color: #fff;
+}
+
+#header .top_wrap .top_right.toggle>ul:nth-child(2) {
+    justify-content: flex-end;
+    width: 30%;
+    margin-right: 0;
+    padding: 0;
+}
+
+#header .top_wrap .top_right>ul:nth-child(2) li:nth-child(4) {
+    margin: 0;
+}
+
+#header .top_wrap li select {
+    display: none;
+}
+
+#header .gnb.toggle {
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    width: 70%;
+    font-size: 0.9rem;
+    opacity: 1;
+    border: 1px solid lime;
+}
+
+#header .nav .gnb.toggle>li {
+    border-bottom: 1px solid #fff;
+    padding: 20px;
+    color: #fff;
+    background-color: #1D326C;
+}
+
+#header .nav .gnb .menu_title li {
+    border-bottom: palegoldenrod;
+}
+
+#header .nav .gnb.toggle>li a {
+    color: #fff;
+}
+
+#header .nav .gnb.toggle>li>ul {
+    border: 1px solid #fff;
+    display: none;
+    color: #fff;
+    background-color: rgb(42, 65, 129);
+}
