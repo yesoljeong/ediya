@@ -1,37 +1,8 @@
 /* 공통 */
-#header {
-    background-color:red;
-}
 
 #container .line {
     display: none;
 }
-
-/* #header {
-    height: 93px;
-}
-
-#header .topmenu {
-    border-bottom: 1px solid #eaeaea;
-    padding: 10px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#header .topmenu .top_right {
-    display: none;
-}
-
-#header .nav {
-    font-size: 0;
-    padding-left: 30px;
-    justify-content: left;
-    pointer-events: none;
-}
-
-#header .nav .gnb.mobile>li {
-    display: none;
-} */
 
 /* dream Factory */
 #container em {
@@ -90,12 +61,12 @@
 #container .menu_banner .ani_object01 {
     top: 50px;
     left: -200px;
-    border: 10px solid lime;
+    /* border: 10px solid lime; */
 }
 
 #container .menu_banner .ani_object02 {
     top: 120px;
-    border: 10px solid blue;
+    /* border: 10px solid blue; */
 }
 
 #container .menu_banner .ani_object01 img:nth-child(1) {

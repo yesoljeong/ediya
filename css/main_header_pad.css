@@ -1,6 +1,6 @@
 #header {
     margin: 0;
-    height: 90px;
+    height: 70px;
     padding:0;
 }
 
@@ -148,6 +148,10 @@
     background-color: #1D326C;
 }
 
+#header .nav .gnb.toggle>li>ul.on{
+    display:block;
+}
+
 #header .nav .gnb.toggle>li a {
     padding: 20px;
     width: 100%;
@@ -164,7 +168,6 @@
 }
 
 #header .nav .gnb.toggle>li>ul {
-    border: 1px solid #fff;
     display: none;
     color: #fff;
     background-color: rgb(42, 65, 129);

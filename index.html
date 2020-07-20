@@ -340,40 +340,37 @@
 
 
     // header Toggle click event
+    // console.log(event.target);  // 클릭한 대상 모두를 타겟으로
+    // console.log(this);  // 이벤트리스너를 건 애들만
+    // console.log(event.currentTarget);  // 이벤트리스너를 건 애들만
+    // console.log(event.currentTarget.childNodes[2])
 
-    const gnbTitles = document.querySelectorAll('.menu_title');
+    // 1. 클릭이벤트 > 클릭한 애가 누군지 확인하고 > 
 
-    for (let i = 0; i < gnbTitles.length; i++) {
-        gnbTitles[i].addEventListener('click', toggleGnb);
+    const menuTitle = document.querySelectorAll('.gnb .menu_title')
+
+    // console.log(menuTitle)
+
+    for (let i = 0; i < menuTitle.length; i++) {
+        menuTitle[i].addEventListener('click', clickWork)
     }
 
-    function toggleGnb(event) {
-        const gnbLis = event.currentTarget.getElementsByTagName('ul');
+    function clickWork(event) {
+        const ulOn = document.querySelectorAll('.gnb .menu_title ul.on');
 
-
-        // console.log(event.target);  // 클릭한 대상 모두를 타겟으로
-        // console.log(this);  // 이벤트리스너를 건 애들만
-        // console.log(event.currentTarget);  // 이벤트리스너를 건 애들만
-        // console.log(event.currentTarget.childNodes[2])
-        for (let i = 0; i < gnbTitles.length; i++) {
-            const ul = gnbLis[0];
-
-            if (gnbLis.length < 1) {
-                continue;
-            }
-
-            if (ul.style.display === '') {
-                ul.style.display = 'block';
-            } else {
-                ul.style.display = '';
-            }
-            // if (event.currentTarget.childNodes[2].style.display === '') {
-            //     event.currentTarget.childNodes[2].style.display = 'block';
-            // } else {
-            //     event.currentTarget.childNodes[2].style.display = '';
-            // }
+        for(let i=0; i<ulOn.length ; i++){
+            ulOn[i].className = ''
+        }
+        
+        const ulElenm = event.currentTarget
+        if (ulElenm.children[1].className === '') {
+            ulElenm.children[1].className = 'on'
+        } else {
+            ulElenm.children[1].className = ''
         }
     }
+
+    // toggle 버튼 클릭 시 gnb 열림
 
     const gnbBtn = document.querySelector('#header .nav .gnb');
 

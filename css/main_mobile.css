@@ -1,38 +1,7 @@
 /* 공통 */
-#header {
-    background-color: red;
-}
-
 #container .line {
     display: none;
 }
-
-/* header */
-/* #header {
-    height: 93px;
-}
-
-#header .topmenu {
-    border-bottom: 1px solid #eaeaea;
-    padding: 10px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#header .topmenu .top_right {
-    display: none;
-}
-
-#header .nav {
-    font-size: 0;
-    padding-left: 30px;
-    justify-content: left;
-    pointer-events: none;
-}
-
-#header .nav .gnb {
-    display: none;
-} */
 
 /* 드림 팩토리 */
 #container .dream_factory {
@@ -96,12 +65,12 @@
 #container .menu_banner .ani_object01 {
     top: 50px;
     left: -300px;
-    border: 10px solid tomato;
+    /* border: 10px solid tomato; */
 }
 
 #container .menu_banner .ani_object02 {
     top: 120px;
-    border: 10px solid tomato;
+    /* border: 10px solid tomato; */
 }
 
 #container .menu_banner .ani_object01 img:nth-child(1) {
@@ -142,8 +111,7 @@
 /* 프랜차이즈 */
 #container .franchise {
     background-image: url('../img/company_bg_m.jpg');
-    background-position: center;
-    
+    background-position: center; 
 }
 
 #container .franchise .franchise_info {
@@ -222,8 +190,6 @@
     height: 70vw;
     margin: 40px 0;
 }
-
-
 
 /* 인포 섹션 */
 #container .info {
