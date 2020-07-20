@@ -112,10 +112,26 @@
                 <button type="button" class="btn_prev"><span class="screen_out">이전</span></button>
                 <button type="button" class="btn_next"><span class="screen_out">다음</span></button>
                 <div class="slide_banner">
-                    <div><img src="img/main_banner_1.jpg" alt="mainanner"></div>
-                    <div><img src="img/main_banner_2.jpg" alt="mainanner"></div>
-                    <div><img src="img/main_banner_3.jpg" alt="mainanner"></div>
-                    <div><img src="img/main_banner_4.jpg" alt="mainanner"></div>
+                    <picture>
+                        <source media="(min-width: 980px)" srcset="img/main_banner_1.jpg">
+                        <source media="(min-width: 640px)" srcset="img/main_banner_1_pad.jpg">
+                        <img src="img/main_banner_1_m.jpg" alt="People">
+                    </picture>
+                    <picture>
+                        <source media="(min-width: 980px)" srcset="img/main_banner_2.jpg">
+                        <source media="(min-width: 640px)" srcset="img/main_banner_2_pad.jpg">
+                        <img src="img/main_banner_2_m.jpg" alt="People">
+                    </picture>
+                    <picture>
+                        <source media="(min-width: 980px)" srcset="img/main_banner_3.jpg">
+                        <source media="(min-width: 640px)" srcset="img/main_banner_pad_3.jpg">
+                        <img src="img/main_banner_3_m.jpg" alt="People">
+                    </picture>
+                    <picture>
+                        <source media="(min-width: 980px)" srcset="img/main_banner_4.jpg">
+                        <source media="(min-width: 640px)" srcset="img/main_banner_4_pad.jpg">
+                        <img src="img/main_banner_4_m.jpg" alt="People">
+                    </picture>
                 </div>
             </div>
 
@@ -291,6 +307,7 @@
     });
 
     const nav = document.querySelector('#header .nav');
+    const logo = document.querySelector('#header .logo');
     const html = document.querySelector('html');
     let start;
 
@@ -298,8 +315,10 @@
         console.log(html.scrollTop);
         if (html.scrollTop > 50) {
             nav.classList.add('fix');
+            logo.classList.add('fix');
         } else {
             nav.classList.remove('fix');
+            logo.classList.remove('fix');
         }
     }
 

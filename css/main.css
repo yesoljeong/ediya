@@ -28,8 +28,8 @@ a {
 #header {
     position: relative;
     padding-top: 20px;
-    height: 130px;
-    background-color: tomato;
+    height: 110px;
+    /* background-color: tomato; */
 }
 
 #header .top_left {
@@ -41,7 +41,7 @@ a {
     font-weight: 900;
     height: 30px;
     align-items: center;
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
 }
 
 #header .top_left li:nth-child(1) {
@@ -51,6 +51,22 @@ a {
 
 #header .top_left li:nth-child(2) {
     padding-left: 16px;
+}
+
+#header .logo {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 35%;
+    /* border: 2px solid lime; */
+    z-index: 999;
+    /* margin: 0 auto; */
+    text-align: center;
+    margin-left: 20px;
+}
+
+#header .logo.fix {
+    top: 18px;
 }
 
 #header .top_wrap .top_right {
@@ -67,7 +83,7 @@ a {
 #header .top_wrap .top_right>ul:nth-child(1) {
     display: flex;
     justify-content: flex-end;
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
     width: 50%;
     height: 30px;
     align-items: center;
@@ -88,7 +104,7 @@ a {
 
 #header .top_wrap .top_right>ul:nth-child(2) {
     display: flex;
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
     width: 50%;
 }
 
@@ -147,6 +163,7 @@ a {
     overflow: hidden;
     border-bottom: 1px solid gray;
     z-index: 10;
+    /* border: 2px solid red; */
 }
 
 #header .nav:hover {
@@ -161,14 +178,6 @@ a {
     right: 0;
     left: 0;
     border-bottom: 1px solid #EAEAEA;
-}
-
-#header .logo {
-    position: relative;
-    bottom: -40px;
-    left: 170px;
-    z-index: 99;
-    width: 202px;
 }
 
 #header .nav .gnb {
@@ -385,7 +394,7 @@ button {
     top: 0;
     width: 50%;
     height: 800px;
-    border: 10px solid lime;
+    /* border: 10px solid lime; */
 }
 
 #container .menu_banner .ani_object02 {
@@ -763,7 +772,8 @@ button {
     left: 50%;
     transform: translate(-50%);
     border-bottom: 0px solid #fff;
-    transition: all.3s linear
+    transition: all.3s linear;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1:hover p {
@@ -801,6 +811,7 @@ button {
     border-bottom: 0px solid #fff;
     transition: all .3s linear;
     transform: translate(-50%);
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img2:hover p {
@@ -944,11 +955,13 @@ button {
     margin: 50px 0 30px 0;
     font-weight: 900;
     color: #3C3C3C;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #container .sns p:nth-child(3) {
     margin: 30px 0 40px 0;
     color: #7B7B7B;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #container .sns .sns_img {
