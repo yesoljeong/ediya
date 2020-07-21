@@ -94,7 +94,6 @@ a {
     margin-right: 15px;
     font-size: 0.8rem;
     padding-right: 16px;
-
 }
 
 #header .top_wrap .top_right>ul:nth-child(1) li:last-child {
@@ -181,12 +180,12 @@ a {
 }
 
 #header .nav .gnb {
-    width: 900px;
+    width: 850px;
     display: flex;
     justify-content: space-around;
     background-color: #fff;
     position: absolute;
-    margin-left: 100px;
+    margin-left: 180px;
 }
 
 #header .nav .gnb .menu_title {}

@@ -3,6 +3,26 @@
     display: none;
 }
 
+/* 토글 */
+#header .top_wrap .top_right.toggle>ul:nth-child(1){
+    width:49%;
+}
+
+#header .top_wrap .top_right.toggle>ul:nth-child(1) .toggle_store{
+    color:red;
+    display:none;
+}
+
+#header .top_wrap .top_right>ul:nth-child(1) li:nth-child(2){
+    border-right:0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#header .top_wrap .close_btn.toggle{
+    left:15%;
+}
+
 /* 드림 팩토리 */
 #container .dream_factory {
     flex: none;

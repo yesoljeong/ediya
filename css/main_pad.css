@@ -4,6 +4,12 @@
     display: none;
 }
 
+/* 토글 */
+
+#header .top_wrap .close_btn.toggle{
+    left:16%;
+}
+
 /* dream Factory */
 #container em {
     text-indent: 0;

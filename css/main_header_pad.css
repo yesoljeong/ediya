@@ -113,13 +113,17 @@
 
 #header .top_wrap .top_right.toggle>ul:nth-child(1) {
     justify-content: left;
-    width: 80%;
+    width: 60%;
     margin: 0;
     padding: 0;
+    /* border:1px solid lime; */
 }
 
 #header .top_wrap .top_right li a {
     color: #fff;
+    /* width:100%; */
+    /* height:100%; */
+    padding:5px 0;
 }
 
 #header .top_wrap .top_right.toggle>ul:nth-child(2) {
