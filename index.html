@@ -40,7 +40,8 @@
                 </a>
             </div>
             <div class="top_wrap selTo">
-                <div class="top_right selTo ">
+                <a href="#" class="close_btn selTo"></a>
+                <div class="top_right selTo">
                     <ul>
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
@@ -60,8 +61,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="nav selTo ">
-
+                <div class="nav selTo">
                     <!-- GNB MENU -->
                     <ul class="gnb selTo ">
                         <h2 class="screen_out">이디야 메인 메뉴</h2>
@@ -328,7 +328,6 @@
     }
 
     // 메인 슬라이더 관련
-
     $(document).ready(function () {
 
         const opt = {
@@ -345,11 +344,7 @@
     // console.log(event.currentTarget);  // 이벤트리스너를 건 애들만
     // console.log(event.currentTarget.childNodes[2])
 
-    // 1. 클릭이벤트 > 클릭한 애가 누군지 확인하고 > 
-
     const menuTitle = document.querySelectorAll('.gnb .menu_title')
-
-    // console.log(menuTitle)
 
     for (let i = 0; i < menuTitle.length; i++) {
         menuTitle[i].addEventListener('click', clickWork)
@@ -358,10 +353,10 @@
     function clickWork(event) {
         const ulOn = document.querySelectorAll('.gnb .menu_title ul.on');
 
-        for(let i=0; i<ulOn.length ; i++){
+        for (let i = 0; i < ulOn.length; i++) {
             ulOn[i].className = ''
         }
-        
+
         const ulElenm = event.currentTarget
         if (ulElenm.children[1].className === '') {
             ulElenm.children[1].className = 'on'
@@ -370,11 +365,22 @@
         }
     }
 
+
     // toggle 버튼 클릭 시 gnb 열림
 
     const gnbBtn = document.querySelector('#header .nav .gnb');
+    const closeBtn = document.querySelector('.close_btn')
 
     gnbBtn.addEventListener('click', gnbBtnClick);
+    closeBtn.addEventListener('click', toggleClose)
+
+    function toggleClose() {
+        const toggleElems = document.querySelectorAll('#header .selTo');
+
+        for (let i = 0; i < toggleElems.length; i++) {
+            toggleElems[i].classList.remove('toggle');
+        }
+    }
 
     function gnbBtnClick() {
         const toggleElems = document.querySelectorAll('#header .selTo');
