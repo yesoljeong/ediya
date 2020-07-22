@@ -41,6 +41,7 @@
             </div>
             <div class="top_wrap selTo">
                 <a href="#" class="close_btn selTo"></a>
+                <a href="#" class="toggle_btn selTo"></a>
                 <div class="top_right selTo">
                     <ul>
                         <li><a href="#">로그인</a></li>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="nav selTo">
                     <!-- GNB MENU -->
-                    <ul class="gnb selTo ">
+                    <ul class="gnb selTo">
                         <h2 class="screen_out">이디야 메인 메뉴</h2>
                         <li class="menu_title"><a href="#"><span>메뉴</span></a>
                             <ul>
@@ -308,6 +309,7 @@
 
     const nav = document.querySelector('#header .nav');
     const logo = document.querySelector('#header .logo');
+    const toggleBtn = document.querySelector('#header .toggle_btn');
     const html = document.querySelector('html');
     const menuTitle = document.querySelectorAll('.gnb .menu_title');
     const gnbBtn = document.querySelector('#header .nav .gnb');
@@ -320,9 +322,11 @@
         if (html.scrollTop > 50) {
             nav.classList.add('fix');
             logo.classList.add('fix');
+            toggleBtn.classList.add('fix')
         } else {
             nav.classList.remove('fix');
             logo.classList.remove('fix');
+            toggleBtn.classList.remove('fix')
         }
     }
 
@@ -348,21 +352,24 @@
 
     function clickWork(event) {
         const ulOn = document.querySelectorAll('.gnb .menu_title ul.on');
+        const ulElem = event.currentTarget
 
         for (let i = 0; i < ulOn.length; i++) {
-            ulOn[i].className = ''
+
+            if(event.currentTarget !== ulOn[i].parentNode){
+                ulOn[i].classList.remove('on');
+            }
         }
 
-        const ulElenm = event.currentTarget
-        if (ulElenm.children[1].className === '') {
-            ulElenm.children[1].className = 'on'
+        if (ulElem.children[1].classList.contains('on')) {
+            ulElem.children[1].classList.remove('on')
         } else {
-            ulElenm.children[1].className = ''
+            ulElem.children[1].classList.add('on');
         }
     }
 
     // toggle 버튼 클릭 시 gnb 열림 / 닫힘
-    gnbBtn.addEventListener('click', gnbBtnClick);
+    toggleBtn.addEventListener('click', gnbBtnClick);
     closeBtn.addEventListener('click', toggleClose)
 
     function toggleClose() {
