@@ -1,7 +1,7 @@
 #header {
     margin: 0;
-    height: 70px;
     padding: 0;
+    height: 70px;
 }
 
 #header .logo {
@@ -80,12 +80,12 @@
     width: 80%;
     background-color: #1D326C;
     opacity: 1;
+    box-shadow: rgba(0,0,0,0.7) 0 0 0 9999px, rgba(0,0,0,0.2) 2px 2px 3px 3px;
     z-index: 999;
 }
 
 #header .top_wrap .close_btn.toggle {
     background: url('../img/m_nav_close.png');
-    background-color:tomato;
     width: 19px;
     height: 20px;
     position: fixed;
@@ -116,13 +116,10 @@
     width: 60%;
     margin: 0;
     padding: 0;
-    /* border:1px solid lime; */
 }
 
 #header .top_wrap .top_right li a {
     color: #fff;
-    /* width:100%; */
-    /* height:100%; */
     padding:5px 0;
 }
 

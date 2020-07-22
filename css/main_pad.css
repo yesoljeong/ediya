@@ -67,12 +67,10 @@
 #container .menu_banner .ani_object01 {
     top: 50px;
     left: -200px;
-    /* border: 10px solid lime; */
 }
 
 #container .menu_banner .ani_object02 {
     top: 120px;
-    /* border: 10px solid blue; */
 }
 
 #container .menu_banner .ani_object01 img:nth-child(1) {

@@ -29,11 +29,9 @@ a {
     position: relative;
     padding-top: 20px;
     height: 110px;
-    /* background-color: tomato; */
 }
 
 #header .top_left {
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: center;
     width: 35%;
@@ -41,7 +39,6 @@ a {
     font-weight: 900;
     height: 30px;
     align-items: center;
-    /* border: 1px solid lime; */
 }
 
 #header .top_left li:nth-child(1) {
@@ -58,9 +55,7 @@ a {
     top: 70px;
     left: 0;
     width: 35%;
-    /* border: 2px solid lime; */
     z-index: 999;
-    /* margin: 0 auto; */
     text-align: center;
     margin-left: 20px;
 }
@@ -83,7 +78,6 @@ a {
 #header .top_wrap .top_right>ul:nth-child(1) {
     display: flex;
     justify-content: flex-end;
-    /* border: 1px solid lime; */
     width: 50%;
     height: 30px;
     align-items: center;
@@ -103,7 +97,6 @@ a {
 
 #header .top_wrap .top_right>ul:nth-child(2) {
     display: flex;
-    /* border: 1px solid lime; */
     width: 50%;
 }
 
@@ -162,7 +155,6 @@ a {
     overflow: hidden;
     border-bottom: 1px solid gray;
     z-index: 10;
-    /* border: 2px solid red; */
 }
 
 #header .nav:hover {
@@ -188,8 +180,6 @@ a {
     margin-left: 180px;
 }
 
-#header .nav .gnb .menu_title {}
-
 #header .nav .gnb .menu_title ul {
     margin-top: 30px;
 }
@@ -200,10 +190,6 @@ a {
     font-weight: 500;
 }
 
-#header .nav .gnb .menu_title a span {
-    font-weight: 700;
-}
-
 #header .nav .gnb .menu_title li a {
     padding: 10px 0;
     font-size: 13px;
@@ -212,6 +198,32 @@ a {
 
 #header .nav .gnb .menu_title li a:hover {
     color: rgba(0, 0, 0, 1)
+}
+
+/* #header .nav .gnb .menu_title li a:hover span:before{
+    transform: scaleX(1);
+} */
+
+#header .nav .gnb .menu_title a span {
+    font-weight: 700;
+    display: block;
+    font-size: 15px;
+    color: #333;
+    position: relative;
+}
+
+#header .nav .gnb .menu_title a span:before{
+    content: "";
+    position: absolute;
+    left: -1px;
+    bottom: -10px;
+    /* 부모의 넓이만큼 */
+    width: calc(100% + 2px);
+    height: 3px;
+    background-color: #000;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+    transition: transform 0.3s linear;
 }
 
 /* content */
@@ -287,7 +299,6 @@ a {
     margin-top: 30px;
     width: 35%;
     line-height: 1.3rem;
-    ;
 }
 
 #container .dream_factory img {
@@ -368,9 +379,12 @@ button {
 }
 
 #container .menu_banner button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     display: block;
     background-color: rgba(0, 0, 0, 0);
-    margin: 40px auto;
+    margin: 40px 0;
     border: 1px solid #243C86;
     padding: 0;
 }
@@ -393,7 +407,6 @@ button {
     top: 0;
     width: 50%;
     height: 800px;
-    /* border: 10px solid lime; */
 }
 
 #container .menu_banner .ani_object02 {
@@ -402,7 +415,6 @@ button {
     right: 0;
     width: 50%;
     height: 800px;
-    border: 10px solid blue;
 }
 
 @keyframes ani1 {
@@ -414,16 +426,19 @@ button {
     }
 }
 
-#container .menu_banner .ani_object01 img:nth-child(1) {
+#container .menu_banner .ani_object01 img,
+#container .menu_banner .ani_object02 img {
     position: absolute;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#container .menu_banner .ani_object01 img:nth-child(1) {
+
     top: 45px;
     left: 200px;
     animation-name: ani1;
     animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    border: 5px solid red;
 }
 
 @keyframes ani2 {
@@ -436,15 +451,11 @@ button {
 }
 
 #container .menu_banner .ani_object01 img:nth-child(2) {
-    position: absolute;
     top: 150px;
     left: 310px;
     animation-name: ani2;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation-duration: 1.1s;
     animation-direction: alternate-reverse;
-    border: 5px solid tomato;
 }
 
 @keyframes ani3 {
@@ -457,15 +468,11 @@ button {
 }
 
 #container .menu_banner .ani_object01 img:nth-child(3) {
-    position: absolute;
     top: 290px;
     left: 370px;
     animation-name: ani3;
     animation-duration: 1.2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
     animation-direction: alternate;
-    border: 5px solid yellow;
 }
 
 @keyframes ani4 {
@@ -478,15 +485,11 @@ button {
 }
 
 #container .menu_banner .ani_object02 img:nth-child(1) {
-    position: absolute;
     top: 170px;
     right: -140px;
     animation-name: ani4;
-    animation-duration: 1.2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation-duration: 1s;
     animation-direction: alternate-reverse;
-    border: 5px solid green;
 }
 
 @keyframes ani5 {
@@ -499,15 +502,11 @@ button {
 }
 
 #container .menu_banner .ani_object02 img:nth-child(2) {
-    position: absolute;
     top: 50px;
     right: 380px;
     animation-name: ani5;
     animation-duration: 1.1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
     animation-direction: alternate;
-    border: 5px solid blue;
 }
 
 @keyframes ani6 {
@@ -520,15 +519,11 @@ button {
 }
 
 #container .menu_banner .ani_object02 img:nth-child(3) {
-    position: absolute;
     top: 200px;
     right: 120px;
     animation-name: ani6;
     animation-duration: 1.2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-    border: 5px solid rgb(4, 4, 90);
 }
 
 @keyframes ani7 {
@@ -541,15 +536,11 @@ button {
 }
 
 #container .menu_banner .ani_object02 img:nth-child(4) {
-    position: absolute;
     top: 140px;
     right: 70px;
     animation-name: ani7;
     animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
     animation-direction: alternate;
-    border: 5px solid purple;
 }
 
 /* FRANCHISE BANNER */
@@ -647,10 +638,11 @@ button {
 #container .culture_lab ul li {
     width: 33.3333%;
     float: left;
-    box-sizing: border-box;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-
-#container .icon1 {}
 
 @keyframes icon1_ani {
     from {}
@@ -662,10 +654,6 @@ button {
 
 #container .culture_lab .icon1:hover {
     animation-name: icon1_ani;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #container .culture_lab .icon2 {
@@ -682,10 +670,6 @@ button {
 
 #container .culture_lab .icon2:hover {
     animation-name: icon1_an2;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #container .culture_lab .icon3 {}
@@ -700,10 +684,6 @@ button {
 
 #container .culture_lab .icon3:hover {
     animation-name: icon1_an3;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #container .culture_lab_icon a p {
@@ -737,6 +717,7 @@ button {
     position: relative;
     width: 60%;
     margin: 80px auto;
+    border: 5px solid tomato;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1 {
@@ -748,13 +729,15 @@ button {
     overflow: hidden;
     width: 53%;
     height: auto;
-    box-sizing: border-box;
+    border: 5px solid red;
+
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1 img {
     transition: transform .5s linear;
     width: 100%;
     vertical-align: top;
+    border: 5px solid lime;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1 img:hover {
@@ -787,12 +770,14 @@ button {
     overflow: hidden;
     width: 53%;
     box-sizing: border-box;
+    border: 5px solid red;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img2 img {
     transition: all .5s linear;
     width: 100%;
     height: auto;
+    border: 5px solid lime;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img2 img:hover {
@@ -987,14 +972,14 @@ button {
     margin-bottom: 0;
 }
 
+.banner .bx-wrapper .bx-controls-direction a {
+    z-index: 99;
+}
+
 .banner .bx-wrapper .bx-next {
     background: url('../img/main_visual_next.png');
     width: 24px;
     height: 45px;
-}
-
-.banner .bx-wrapper .bx-controls-direction a {
-    z-index: 99;
 }
 
 .banner .bx-wrapper .bx-prev {

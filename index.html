@@ -152,7 +152,6 @@
                 <p>ALWAYS BESIDE YOU, <span class="bold">EDIYA COFFEE</span></p>
                 <div class="line"></div>
                 <p>늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.</p>
-                <button type="button"><a href="#">메뉴보기</a></button>
                 <div class="menu_banner_ani ani_object01">
                     <img src="img/ani_object01_01.png" alt="">
                     <img src="img/ani_object01_02.png" alt="">
@@ -164,6 +163,7 @@
                     <img src="img/ani_object02_03.png" alt="">
                     <img src="img/ani_object02_02.png" alt="">
                 </div>
+                <button type="button"><a href="#">메뉴보기</a></button>
             </article>
 
             <!-- FRANCHISE BANNER -->
@@ -309,8 +309,12 @@
     const nav = document.querySelector('#header .nav');
     const logo = document.querySelector('#header .logo');
     const html = document.querySelector('html');
+    const menuTitle = document.querySelectorAll('.gnb .menu_title');
+    const gnbBtn = document.querySelector('#header .nav .gnb');
+    const closeBtn = document.querySelector('.close_btn')
     let start;
 
+    // 헤더 스크롤 관련 스크립트
     function realScrollWork() {
         console.log(html.scrollTop);
         if (html.scrollTop > 50) {
@@ -337,15 +341,7 @@
         $('.slide_banner').bxSlider(opt);
     });
 
-
-    // header Toggle click event
-    // console.log(event.target);  // 클릭한 대상 모두를 타겟으로
-    // console.log(this);  // 이벤트리스너를 건 애들만
-    // console.log(event.currentTarget);  // 이벤트리스너를 건 애들만
-    // console.log(event.currentTarget.childNodes[2])
-
-    const menuTitle = document.querySelectorAll('.gnb .menu_title')
-
+    // 토글 메뉴 관련 스크립트
     for (let i = 0; i < menuTitle.length; i++) {
         menuTitle[i].addEventListener('click', clickWork)
     }
@@ -365,12 +361,7 @@
         }
     }
 
-
-    // toggle 버튼 클릭 시 gnb 열림
-
-    const gnbBtn = document.querySelector('#header .nav .gnb');
-    const closeBtn = document.querySelector('.close_btn')
-
+    // toggle 버튼 클릭 시 gnb 열림 / 닫힘
     gnbBtn.addEventListener('click', gnbBtnClick);
     closeBtn.addEventListener('click', toggleClose)
 
