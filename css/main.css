@@ -172,12 +172,12 @@ a {
 }
 
 #header .nav .gnb {
-    width: 850px;
+    width: 900px;
     display: flex;
     justify-content: space-around;
     background-color: #fff;
     position: absolute;
-    margin-left: 180px;
+    margin-left: 120px;
 }
 
 #header .nav .gnb .menu_title ul {
@@ -717,7 +717,6 @@ button {
     position: relative;
     width: 60%;
     margin: 80px auto;
-    border: 5px solid tomato;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1 {
@@ -729,15 +728,12 @@ button {
     overflow: hidden;
     width: 53%;
     height: auto;
-    border: 5px solid red;
-
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1 img {
     transition: transform .5s linear;
     width: 100%;
     vertical-align: top;
-    border: 5px solid lime;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img1 img:hover {
@@ -770,14 +766,12 @@ button {
     overflow: hidden;
     width: 53%;
     box-sizing: border-box;
-    border: 5px solid red;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img2 img {
     transition: all .5s linear;
     width: 100%;
     height: auto;
-    border: 5px solid lime;
 }
 
 #container .coffee_lab .coffee_lab_img .back_img2 img:hover {
