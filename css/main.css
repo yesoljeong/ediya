@@ -431,10 +431,10 @@ button {
     position: absolute;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #container .menu_banner .ani_object01 img:nth-child(1) {
-
     top: 45px;
     left: 200px;
     animation-name: ani1;

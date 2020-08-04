@@ -36,8 +36,8 @@
     height: 0px;
 }
 
-#header .nav .gnb .menu_title a span:before{
-    display:none;
+#header .nav .gnb .menu_title a span:before {
+    display: none;
 }
 
 #header .nav .gnb .menu_title a span {
@@ -100,6 +100,11 @@
     top: 38px;
     right: 10px;
     z-index: 999;
+    border: 1px solid red;
+}
+
+#header .top_wrap .toggle_btn.toggle {
+    display: none;
 }
 
 #header .top_wrap .toggle_btn.fix {
@@ -162,7 +167,7 @@
 
 #header .nav .gnb.toggle>li {
     border-top: solid 1px #344a86;
-    border-bottom: solid 1px #203570;  
+    border-bottom: solid 1px #203570;
     background-color: #1D326C;
 }
 
