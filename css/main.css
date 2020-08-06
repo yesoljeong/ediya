@@ -172,12 +172,12 @@ a {
 }
 
 #header .nav .gnb {
-    width: 900px;
+    width: 800px;
     display: flex;
     justify-content: space-around;
     background-color: #fff;
     position: absolute;
-    margin-left: 120px;
+    margin-left: 170px;
 }
 
 #header .nav .gnb .menu_title ul {
