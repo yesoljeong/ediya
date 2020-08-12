@@ -100,7 +100,6 @@
     top: 38px;
     right: 10px;
     z-index: 999;
-    border: 1px solid red;
 }
 
 #header .top_wrap .toggle_btn.toggle {

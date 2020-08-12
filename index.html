@@ -18,10 +18,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
     <title>작업중 EDIYA COFFEE 수정</title>
-    <!-- https://www.ediya.com -->
-
 </head>
 
 <body>
@@ -311,6 +308,7 @@
     const menuTitle = document.querySelectorAll('.gnb .menu_title');
     const gnbBtn = document.querySelector('#header .nav .gnb');
     const closeBtn = document.querySelector('.close_btn')
+    const cultureIcons = document.querySelectorAll('.culture_lab_icon')
     let start;
 
     // 헤더 스크롤 관련 스크립트
@@ -324,6 +322,15 @@
             nav.classList.remove('fix');
             logo.classList.remove('fix');
             toggleBtn.classList.remove('fix')
+        }
+
+        // culture lab 부분 스크롤 애니메이션 스크립트
+        for (let i = 0; i < cultureIcons.length; i++) {
+            if (html.scrollTop > 2100) {
+                cultureIcons[i].classList.add('on')
+            }else{
+                cultureIcons[i].classList.remove('on')
+            }
         }
     }
 
@@ -353,7 +360,7 @@
 
         for (let i = 0; i < ulOn.length; i++) {
 
-            if(event.currentTarget !== ulOn[i].parentNode){
+            if (event.currentTarget !== ulOn[i].parentNode) {
                 ulOn[i].classList.remove('on');
             }
         }

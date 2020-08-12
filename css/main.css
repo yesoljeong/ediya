@@ -200,7 +200,7 @@ a {
     color: rgba(0, 0, 0, 1)
 }
 
-#header .nav .gnb li a:hover span:before{
+#header .nav .gnb li a:hover span:before {
     transform: scaleX(1);
 }
 
@@ -212,7 +212,7 @@ a {
     position: relative;
 }
 
-#header .nav .gnb .menu_title a span:before{
+#header .nav .gnb .menu_title a span:before {
     content: "";
     position: absolute;
     left: -1px;
@@ -636,12 +636,21 @@ button {
 }
 
 #container .culture_lab ul li {
+    transition: all 0.3s linear;
+    opacity: 0;
+    padding-top: 50px;
+}
+
+#container .culture_lab ul li.on {
     width: 33.3333%;
     float: left;
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    transition: all 0.3s linear;
+    opacity: 1;
+    padding-top: 0;
 }
 
 @keyframes icon1_ani {
@@ -656,7 +665,11 @@ button {
     animation-name: icon1_ani;
 }
 
-#container .culture_lab .icon2 {
+#container .culture_lab .icon1.on {
+    transition-delay: .2s;
+}
+
+#container .culture_lab .icon2.on {
     margin-top: -70px;
 }
 
@@ -672,7 +685,9 @@ button {
     animation-name: icon1_an2;
 }
 
-#container .culture_lab .icon3 {}
+#container .culture_lab .icon3.on {
+    transition-delay: .4s;
+}
 
 @keyframes icon1_an3 {
     from {}
